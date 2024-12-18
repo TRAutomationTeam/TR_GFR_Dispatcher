@@ -1,0 +1,615 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SequenceforNewFirmFolder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_Environment" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:SequenceforNewFirmFolder.in_str_Environment>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SequenceforNewFirmFolder.in_str_Environment>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2534.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="768,2469.6" sap2010:WorkflowViewState.IdRef="Sequence_200">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="705.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;TC_05 - &quot; + &quot;TC_Verify if the user clicks on the Create new folder option.&quot; + &quot; - Passed&quot;]" />
+    <Sequence DisplayName="Sequence for New Firm Folder" sap:VirtualizedContainerService.HintSize="705.6,2206.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground" sap:VirtualizedContainerService.HintSize="643.2,2094.4" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
+        <ui:UseForegroundScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,1992.8" sap2010:WorkflowViewState.IdRef="Sequence_201">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[in_str_Environment.Contains(&quot;Live&quot;)]" sap:VirtualizedContainerService.HintSize="545.6,1904" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1256.8" sap2010:WorkflowViewState.IdRef="Sequence_202">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Create New FirmFlow Folder" sap:VirtualizedContainerService.HintSize="449.6,1168" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,928" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="44, 156, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="48fac929-603c-4fac-aef6-a7f9dd8e8fe9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFXSURBVDhPzZRNi4JQFIbnZ0fa1tqEbiRDqMDMMIj+QfSxShcuNH9Au4LARR+7dzjew01nargzDMM8m8t7OD5c7r3HN/wyfyfc7XYYj8fodrtoNpvl6vs+4jjmjud8El4uFwwGAzQaDXieh+Vyif1+X66UqT4cDnG9XvmLOjUhNRmGgX6/j9PpxNU6x+MRjuOg3W7jdrtx9UFNOBqNymYVbNvGZDLh9EAKkyRBq9VCURRc+Zrz+QxN05CmKVcEUtjr9RCGISc1giCA67qcBFJIZ7fdbjmpsVqt0Ol0OAmkkLaf5zknNbIsg67rnARSaJomNpsNJzXW6zUsy+IkkEI6v+l0ykkNOsPZbMZJIIWHw6Hc/ndumfrpuypSSMzn8/JRq0DvcLFYcHpQE97vd+VJoT7q/0hNSNAs06xWZ5luvzrLNOtKs1zl1d8miiLueM5L4U/570LgHVri5Uwv+pzSAAAAAElFTkSuQmCC" InformativeScreenshot="3169b6d88481995ebc6d6526cdc4c582.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="69, 155, 24, 14" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='TAX' check:innerText='TAX' /&gt;" Guid="d5176862-3715-4ed4-b151-1c37b1c28bdc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAYAAABIB77kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADYSURBVEhL7ZPBDcMwCEU7asZgDXbxrTN4jaxB3ODvYEwlW2pzaZE4hDj/wcd5yM3xQ8DMm2zbm+SMU8JDTWNPNNYza42S7LUUTFhFzaEWEDiTy0kbuyTSd8rEM0kyQktAdYGEWadxQ77GFKrNpGjiEgtAU4fwQERTSO/CCrDaSac/sGsUbN+XDPqZB8JO7AOXZBC1ew6Ik8CgBuFO9JoO6ZlzwO52+rxsxf5O280FsswpIIR8t109AMB23bvGBBA2BRek2fp0/yAC3167D4DfjT/w43EzUOQAZwUZa25p72cAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_204">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="690bd612-b590-491c-bc55-66432155f511" DisplayName="CV Screen Scope 'DIV  div_list_inner'" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+                                    <p:CVScope.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_199">
+                                          <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (18,41,15,14)&quot; +&#xA;&quot;Anchor: Text 'TAX' (38,42,21,10)&quot;]" DesignTimeCacheId="690bd612-b590-491c-bc55-66432155f511" DesignTimeScaleFactor="1.25" DisplayName="CV Click - RadioButton" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="8829a29eeb9f7244bc6e52fd34bf52cb" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                            <p:CvClickWithDescriptor.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </p:CvClickWithDescriptor.CursorPosition>
+                                            <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                              <uc:CvDescriptor Id="46fd9905-ad56-476c-8cde-f4d07676cb6f">
+                                                <uc:CvDescriptor.Anchors>
+                                                  <x:Array Type="uc:CvElementDescriptor">
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="38, 42, 21, 10" ElementType="Text" Text="TAX" />
+                                                  </x:Array>
+                                                </uc:CvDescriptor.Anchors>
+                                                <uc:CvDescriptor.Target>
+                                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="18, 41, 15, 14" ElementType="RadioButton" />
+                                                </uc:CvDescriptor.Target>
+                                              </uc:CvDescriptor>
+                                            </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                            <p:CvClickWithDescriptor.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c29804c2-86b6-405b-a5ca-31019870a096">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </p:CvClickWithDescriptor.Target>
+                                          </p:CvClickWithDescriptor>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </p:CVScope.Body>
+                                    <p:CVScope.DesignTimeCache>
+                                      <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                                    </p:CVScope.DesignTimeCache>
+                                    <p:CVScope.DesignTimeCacheContainer>
+                                      <uc:CvCacheContainer>
+                                        <uc:CvCacheContainer.Caches>
+                                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                            <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'TAX' (Main)" Id="690bd612-b590-491c-bc55-66432155f511" InformativeScreenshot="db52d33a52c9bdd266bcfba4287be8da" LogicalPosition="519, 376" OcrText="Service Type VARSHITHA TAX" Position="519, 376" ScaleFactor="1.25" ScreenshotGuid="75d58f9c-56a1-4995-9b34-376b913a4c75" ServerVersion="1">
+                                              <uc:CVCache.CvAnchorRelations>
+                                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                                  <uc:AnchorRelationInfo IsTargetText="False" Target="1">
+                                                    <uc:AnchorRelationInfo.Anchors>
+                                                      <x:Array Type="x:Int32">
+                                                        <x:Int32>3</x:Int32>
+                                                      </x:Array>
+                                                    </uc:AnchorRelationInfo.Anchors>
+                                                  </uc:AnchorRelationInfo>
+                                                  <uc:AnchorRelationInfo IsTargetText="False" Target="0">
+                                                    <uc:AnchorRelationInfo.Anchors>
+                                                      <x:Array Type="x:Int32">
+                                                        <x:Int32>2</x:Int32>
+                                                      </x:Array>
+                                                    </uc:AnchorRelationInfo.Anchors>
+                                                  </uc:AnchorRelationInfo>
+                                                </scg:List>
+                                              </uc:CVCache.CvAnchorRelations>
+                                              <uc:CVCache.CvUiElements>
+                                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                                                  <uc:CvElementInfo Category="RadioButton" Region="17, 21, 16, 15" />
+                                                  <uc:CvElementInfo Category="RadioButton" Region="18, 41, 15, 14" />
+                                                  <uc:CvElementInfo Category="Icon" Region="17, 41, 16, 15" />
+                                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="16, 20, 18, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="11, 35, 372, 23" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="4, 0, 388, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 0, 33, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="7, 16, 388, 20" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 16, 33, 20" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 16, 17, 20" />
+                                                </scg:List>
+                                              </uc:CVCache.CvUiElements>
+                                              <uc:CVCache.OcrTexts>
+                                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="4">
+                                                  <uc:OcrTextInfo Region="39, 2, 46, 12" Text="Service" />
+                                                  <uc:OcrTextInfo Region="88, 2, 30, 14" Text="Type" />
+                                                  <uc:OcrTextInfo Region="38, 22, 60, 10" Text="VARSHITHA" />
+                                                  <uc:OcrTextInfo Region="38, 42, 21, 10" Text="TAX" />
+                                                </scg:List>
+                                              </uc:CVCache.OcrTexts>
+                                            </uc:CVCache>
+                                          </scg:List>
+                                        </uc:CvCacheContainer.Caches>
+                                      </uc:CvCacheContainer>
+                                    </p:CVScope.DesignTimeCacheContainer>
+                                    <p:CVScope.OCREngine>
+                                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                        <ActivityFunc.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                        </ActivityFunc.Argument>
+                                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                      </ActivityFunc>
+                                    </p:CVScope.OCREngine>
+                                    <p:CVScope.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5474d546-36c8-4c2d-ac95-9e787a43fc4a" InformativeScreenshot="eeafbc6e872ffee6f91b52036bc2c4c5" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='div_list_inner' tableRow='2' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </p:CVScope.Target>
+                                    <p:CVScope.UseLocalServer>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </p:CVScope.UseLocalServer>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </p:CVScope>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_198">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="36, 120, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="0dc612ab-1de1-429b-970b-ff5d63ff046e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVDhPtZJLCoQwEES9uZ8L6NadegFRrxFQRMUD6AX8rGsojRJHmYmM8yA0FULR3SkDD/A/k2EYEMcxXNeF7/tLTZIE4zjKF0dOJlVVwXEclGWJvu+XO9aiKGDbNpqmWe5UDiY0CMNQqmuiKEJd11Kt7CYcgR3oYFkWpmmSSjHhDjiCDnmeI8syqRQTLm/bwTe6roPneVIpJvyFO6jvn+0kTdPlG3XgTvh+YzdhkJgDHUzTxDzPUikmhEFiDj4RBAHatpVq5WBCGCTmgC1zdsJKzQ7eDcjJhDBIzAGXx19gpVZHULk0uYshhMBvR+AFGUNC+cYcS3wAAAAASUVORK5CYII=" InformativeScreenshot="0766399ba978e9cd1eac2c2d133da404.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="56, 119, 19, 11" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='TAX' check:innerText='TAX' /&gt;" Guid="0237255b-847c-4407-a177-7a6291262eef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVDhP7ZHBEcQgCEW3VMugDXqxDQ/bRNr4QcEoxImX3Vv+jDMq8JDvB3/UC1/K4AcyJaQUFmWJSDST3TGKFoisxnIkCSQ5lNup6fbywlLAA3FBmMGheACLb2Taww1Qr1osAMZUmjNrC9dis6Ow7Anz43vz2LRqA1//xbDGx51lomf4ZInKf2K3pMZ176d6hDtLTBfka3bEKSd7bvBf6oUvBJxC8fHpTYOSmgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="25, 418, 82, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='btn btn-Main' aaname='OK' check:innerText='OK' /&gt;" Guid="c96cd11c-8bb0-4ae3-8ead-c88e00da7641" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAYCAYAAABgBArrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVGhD7ZZNCoMwEEZ7jF7WY/QO3kM8Q6Fr10boJog6bTRj4h+0xSFfYYQHZpJsHpMvuRhjSDkfFSvELPZ5uyonoGKFULFCqFghVKwQsGJt1dDisyXZaL6tXfFB7VzLqLPjSurvYV0qIMVO0hrqCq6xtCByKTZIHarM70kLntiipGFP0Koei53+caQ64MRyBGyPc069m6jzccxiO44MX0cBVGwcA4w/7j5ruUvDt7cnHaBiP+1YP/Yxsb7gUgIn9peMDWOcnMUT+4Ylha713Xr4KthfkxJIsY7v37HRHoCLDFbsv6NihVCxQqhYIVSsECpWiI1Y5VxUrAiGXuJ7gt80atHPAAAAAElFTkSuQmCC" InformativeScreenshot="d5cb7d7975cdac87ffdf6dd6ab30a0e5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;TC_06 - &quot; + &quot;TC_Verify once the user selects the service type as Tax and clicks on the OK button.&quot; + &quot; - Passed&quot;]" />
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;New Folder is created&quot;]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="500, 250, 535, 639" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="b859d6aaa9a79351d137607e5fb149a4.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='[object Window]' url='https://www.*' /&gt;" Title="Create New FirmFlow Folder" Url="https://www.gofileroom.com/trpc/ServiceTypeList.asp" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,485.6" sap2010:WorkflowViewState.IdRef="Sequence_203">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Create New FirmFlow Folder" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449,636" sap2010:WorkflowViewState.IdRef="Sequence_208">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" sap:VirtualizedContainerService.HintSize="387,189" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="44, 156, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="48fac929-603c-4fac-aef6-a7f9dd8e8fe9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFXSURBVDhPzZRNi4JQFIbnZ0fa1tqEbiRDqMDMMIj+QfSxShcuNH9Au4LARR+7dzjew01nargzDMM8m8t7OD5c7r3HN/wyfyfc7XYYj8fodrtoNpvl6vs+4jjmjud8El4uFwwGAzQaDXieh+Vyif1+X66UqT4cDnG9XvmLOjUhNRmGgX6/j9PpxNU6x+MRjuOg3W7jdrtx9UFNOBqNymYVbNvGZDLh9EAKkyRBq9VCURRc+Zrz+QxN05CmKVcEUtjr9RCGISc1giCA67qcBFJIZ7fdbjmpsVqt0Ol0OAmkkLaf5zknNbIsg67rnARSaJomNpsNJzXW6zUsy+IkkEI6v+l0ykkNOsPZbMZJIIWHw6Hc/ndumfrpuypSSMzn8/JRq0DvcLFYcHpQE97vd+VJoT7q/0hNSNAs06xWZ5luvzrLNOtKs1zl1d8miiLueM5L4U/570LgHVri5Uwv+pzSAAAAAElFTkSuQmCC" InformativeScreenshot="3169b6d88481995ebc6d6526cdc4c582.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="69, 155, 24, 14" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='TAX' check:innerText='TAX' /&gt;" Guid="4fd13d9f-5111-440d-900a-e5359df20f0e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAYAAABIB77kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADYSURBVEhL7ZPBDcMwCEU7asZgDXbxrTN4jaxB3ODvYEwlW2pzaZE4hDj/wcd5yM3xQ8DMm2zbm+SMU8JDTWNPNNYza42S7LUUTFhFzaEWEDiTy0kbuyTSd8rEM0kyQktAdYGEWadxQ77GFKrNpGjiEgtAU4fwQERTSO/CCrDaSac/sGsUbN+XDPqZB8JO7AOXZBC1ew6Ik8CgBuFO9JoO6ZlzwO52+rxsxf5O280FsswpIIR8t109AMB23bvGBBA2BRek2fp0/yAC3167D4DfjT/w43EzUOQAZwUZa25p72cAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_206">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="690bd612-b590-491c-bc55-66432155f511" DisplayName="CV Screen Scope 'DIV  div_list_inner'" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CVScope_3" SendOnPremData="False" Version="V6">
+                                    <p:CVScope.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_205">
+                                          <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (18,41,15,14)&quot; +&#xA;&quot;Anchor: Text 'TAX' (38,42,21,10)&quot;]" DesignTimeCacheId="690bd612-b590-491c-bc55-66432155f511" DesignTimeScaleFactor="1.25" DisplayName="CV Click - RadioButton" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="8829a29eeb9f7244bc6e52fd34bf52cb" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                            <p:CvClickWithDescriptor.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </p:CvClickWithDescriptor.CursorPosition>
+                                            <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                              <uc:CvDescriptor Id="46fd9905-ad56-476c-8cde-f4d07676cb6f">
+                                                <uc:CvDescriptor.Anchors>
+                                                  <x:Array Type="uc:CvElementDescriptor">
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="38, 42, 21, 10" ElementType="Text" Text="TAX" />
+                                                  </x:Array>
+                                                </uc:CvDescriptor.Anchors>
+                                                <uc:CvDescriptor.Target>
+                                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="18, 41, 15, 14" ElementType="RadioButton" />
+                                                </uc:CvDescriptor.Target>
+                                              </uc:CvDescriptor>
+                                            </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                            <p:CvClickWithDescriptor.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c29804c2-86b6-405b-a5ca-31019870a096">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </p:CvClickWithDescriptor.Target>
+                                          </p:CvClickWithDescriptor>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </p:CVScope.Body>
+                                    <p:CVScope.DesignTimeCache>
+                                      <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                                    </p:CVScope.DesignTimeCache>
+                                    <p:CVScope.DesignTimeCacheContainer>
+                                      <uc:CvCacheContainer>
+                                        <uc:CvCacheContainer.Caches>
+                                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                            <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'TAX' (Main)" Id="690bd612-b590-491c-bc55-66432155f511" InformativeScreenshot="db52d33a52c9bdd266bcfba4287be8da" LogicalPosition="519, 376" OcrText="Service Type VARSHITHA TAX" Position="519, 376" ScaleFactor="1.25" ScreenshotGuid="75d58f9c-56a1-4995-9b34-376b913a4c75" ServerVersion="1">
+                                              <uc:CVCache.CvAnchorRelations>
+                                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                                  <uc:AnchorRelationInfo IsTargetText="False" Target="1">
+                                                    <uc:AnchorRelationInfo.Anchors>
+                                                      <x:Array Type="x:Int32">
+                                                        <x:Int32>3</x:Int32>
+                                                      </x:Array>
+                                                    </uc:AnchorRelationInfo.Anchors>
+                                                  </uc:AnchorRelationInfo>
+                                                  <uc:AnchorRelationInfo IsTargetText="False" Target="0">
+                                                    <uc:AnchorRelationInfo.Anchors>
+                                                      <x:Array Type="x:Int32">
+                                                        <x:Int32>2</x:Int32>
+                                                      </x:Array>
+                                                    </uc:AnchorRelationInfo.Anchors>
+                                                  </uc:AnchorRelationInfo>
+                                                </scg:List>
+                                              </uc:CVCache.CvAnchorRelations>
+                                              <uc:CVCache.CvUiElements>
+                                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                                                  <uc:CvElementInfo Category="RadioButton" Region="17, 21, 16, 15" />
+                                                  <uc:CvElementInfo Category="RadioButton" Region="18, 41, 15, 14" />
+                                                  <uc:CvElementInfo Category="Icon" Region="17, 41, 16, 15" />
+                                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="16, 20, 18, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="11, 35, 372, 23" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="4, 0, 388, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 0, 33, 16" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="7, 16, 388, 20" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 16, 33, 20" />
+                                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 16, 17, 20" />
+                                                </scg:List>
+                                              </uc:CVCache.CvUiElements>
+                                              <uc:CVCache.OcrTexts>
+                                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="4">
+                                                  <uc:OcrTextInfo Region="39, 2, 46, 12" Text="Service" />
+                                                  <uc:OcrTextInfo Region="88, 2, 30, 14" Text="Type" />
+                                                  <uc:OcrTextInfo Region="38, 22, 60, 10" Text="VARSHITHA" />
+                                                  <uc:OcrTextInfo Region="38, 42, 21, 10" Text="TAX" />
+                                                </scg:List>
+                                              </uc:CVCache.OcrTexts>
+                                            </uc:CVCache>
+                                          </scg:List>
+                                        </uc:CvCacheContainer.Caches>
+                                      </uc:CvCacheContainer>
+                                    </p:CVScope.DesignTimeCacheContainer>
+                                    <p:CVScope.OCREngine>
+                                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                        <ActivityFunc.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                        </ActivityFunc.Argument>
+                                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_3" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                      </ActivityFunc>
+                                    </p:CVScope.OCREngine>
+                                    <p:CVScope.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5474d546-36c8-4c2d-ac95-9e787a43fc4a" InformativeScreenshot="eeafbc6e872ffee6f91b52036bc2c4c5" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='div_list_inner' tableRow='2' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </p:CVScope.Target>
+                                    <p:CVScope.UseLocalServer>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </p:CVScope.UseLocalServer>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </p:CVScope>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_207">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="36, 120, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="0dc612ab-1de1-429b-970b-ff5d63ff046e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVDhPtZJLCoQwEES9uZ8L6NadegFRrxFQRMUD6AX8rGsojRJHmYmM8yA0FULR3SkDD/A/k2EYEMcxXNeF7/tLTZIE4zjKF0dOJlVVwXEclGWJvu+XO9aiKGDbNpqmWe5UDiY0CMNQqmuiKEJd11Kt7CYcgR3oYFkWpmmSSjHhDjiCDnmeI8syqRQTLm/bwTe6roPneVIpJvyFO6jvn+0kTdPlG3XgTvh+YzdhkJgDHUzTxDzPUikmhEFiDj4RBAHatpVq5WBCGCTmgC1zdsJKzQ7eDcjJhDBIzAGXx19gpVZHULk0uYshhMBvR+AFGUNC+cYcS3wAAAAASUVORK5CYII=" InformativeScreenshot="0766399ba978e9cd1eac2c2d133da404.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="56, 119, 19, 11" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='TAX' check:innerText='TAX' /&gt;" Guid="f078a96b-0ca3-4c93-af85-db8b361b07d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVDhP7ZHBEcQgCEW3VMugDXqxDQ/bRNr4QcEoxImX3Vv+jDMq8JDvB3/UC1/K4AcyJaQUFmWJSDST3TGKFoisxnIkCSQ5lNup6fbywlLAA3FBmMGheACLb2Taww1Qr1osAMZUmjNrC9dis6Ow7Anz43vz2LRqA1//xbDGx51lomf4ZInKf2K3pMZ176d6hDtLTBfka3bEKSd7bvBf6oUvBJxC8fHpTYOSmgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="25, 418, 82, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='btn btn-Main' aaname='OK' check:innerText='OK' /&gt;" Guid="c96cd11c-8bb0-4ae3-8ead-c88e00da7641" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAYCAYAAABgBArrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVGhD7ZZNCoMwEEZ7jF7WY/QO3kM8Q6Fr10boJog6bTRj4h+0xSFfYYQHZpJsHpMvuRhjSDkfFSvELPZ5uyonoGKFULFCqFghVKwQsGJt1dDisyXZaL6tXfFB7VzLqLPjSurvYV0qIMVO0hrqCq6xtCByKTZIHarM70kLntiipGFP0Koei53+caQ64MRyBGyPc069m6jzccxiO44MX0cBVGwcA4w/7j5ruUvDt7cnHaBiP+1YP/Yxsb7gUgIn9peMDWOcnMUT+4Ylha713Xr4KthfkxJIsY7v37HRHoCLDFbsv6NihVCxQqhYIVSsECpWiI1Y5VxUrAiGXuJ7gt80atHPAAAAAElFTkSuQmCC" InformativeScreenshot="d5cb7d7975cdac87ffdf6dd6ab30a0e5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;New Folder is created&quot;]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="500, 250, 535, 639" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="0e5a094ea14591b2b77fc0ddc7a05a93.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" Title="Create New FirmFlow Folder" Url="https://qed.gofileroom.com/trpc/ServiceTypeList.asp" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;TC_05 - &quot; + &quot;TC_Verify if the user clicks on the Create new folder option.&quot; + &quot; - Passed&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;TC_06 - &quot; + &quot;TC_Verify once the user selects the service type as Tax and clicks on the OK button.&quot; + &quot; - Passed&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:UseForegroundScope.Body>
+      </ui:UseForegroundScope>
+    </Sequence>
+  </Sequence>
+</Activity>
