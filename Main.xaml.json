@@ -28,6 +28,18 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
+    },
+    {
+      "Name": "in_ConfigFile",
+      "DisplayName": "in_ConfigFile",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "C:\\Automation Team\\REF_Integration\\RPA-Folder\\2023\\Config-Main_GFR_Live.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
     }
   ]
 }

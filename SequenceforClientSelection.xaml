@@ -1,4 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SequenceforClientSelection" sap:VirtualizedContainerService.HintSize="1104,636" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SequenceforClientSelection" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_GetTextStrClientNumber" Type="OutArgument(x:String)" />
+    <x:Property Name="io_DictTestSummaryReport" Type="InOutArgument(scg:Dictionary(x:String, sd:DataTable))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1621.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -39,6 +45,10 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -117,59 +127,113 @@
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="512,195.2" sap2010:WorkflowViewState.IdRef="Sequence_196">
+  <Sequence DisplayName="Sequence 'Client Selection'" sap:VirtualizedContainerService.HintSize="1110.4,1556.8" sap2010:WorkflowViewState.IdRef="Sequence_196">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence  for Client Selection" sap:VirtualizedContainerService.HintSize="545.6,734.4" sap2010:WorkflowViewState.IdRef="Sequence_195">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Matching Values" sap:VirtualizedContainerService.HintSize="483.2,622.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V2">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,405.6" sap2010:WorkflowViewState.IdRef="Sequence_194">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Matching Values" sap:VirtualizedContainerService.HintSize="1048,1468" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,1188" sap2010:WorkflowViewState.IdRef="Sequence_194">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Client Number'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" TextString="[out_GetTextStrClientNumber]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="gofileroom.com/lookupvalues.asp" CVScreenId="ad7a8be6-a449-47eb-bca2-69ba42b4dbea" DesignTimeRectangle="498, 176, 481, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableCol='2' tableRow='2' tag='TD' /&gt;" Guid="93ad6d2a-c867-4152-a91a-a3e35838dd34" ImageBase64="" InformativeScreenshot="dd6a877585f02fc66adf548794c1d12a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="f336343a-c81a-4a43-9f59-53a0f2d571c1" CvTextArea="501, 151, 98, 13" CvTextArgument="Client Number" CvType="Text" DesignTimeRectangle="502, 151, 97, 13" ElementType="Text" Guid="d8d23139-28e5-40cb-aa79-24dfa8579fa9" SearchSteps="CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NCheckState DisplayName="Check App State 'Client Name'" sap:VirtualizedContainerService.HintSize="952,725.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears 'TC_08 Pass'" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_197">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message 'TC_08 Pass'" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_78" Message="[&quot;TC_08 - &quot; + &quot;Verify on the name field if the user clicks on the search icon and select the client name.&quot; + &quot; - Pass&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - 'TC_08 Pass'" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Pass"]</InArgument>
+                      <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments" />
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[io_DictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_08"}]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear 'TC_08 Fail'" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_198">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message 'TC_08 Fail'" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_79" Message="[&quot;TC_08 - &quot; + &quot;Verify on the name field if the user clicks on the search icon and select the client name.&quot; + &quot; - Fail&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Fail"]</InArgument>
+                      <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments">["Verify on the name field if the user clicks on the search icon and select the client name."]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[io_DictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_08"}]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="b8f6bfe0-d0f4-4a43-8d99-a65e0a949860" DesignTimeRectangle="17, 144, 481, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='hdr1' tableRow='1' tag='TD' /&gt;" Guid="843e7b91-430a-41cd-bb73-ac28c4fec0d3" InformativeScreenshot="66d806ab71d99867bd322a42b5af6427.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Client Name'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_128" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V3">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/lookupvalues.asp?RefPage=taxfolder&amp;Index=0000000001&amp;Criteria=ACCENTURE*" DesignTimeRectangle="17, 176, 419, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'ACCENTURE'" FullSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='1' type='' tag='TD' class='lookup_grid_data' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; ACCENTURE' /&gt;" Guid="f29e47d3-beeb-4013-b12c-db75153f5ad1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAYCAYAAABHox5vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIFSURBVHhe7dm7kYMwFEBROqQsSqENZ0qcuwRCDxVo9XvogbT8LEe+Z+bNeiUMbHIXj7v3+239vF4v+3g8GIZhmAsj7SSmDMMwH0wR0+fzaQEA10g7iSkAfICYAkADxBQAGiCmANAAMQWABm7H1Ayd7frRTun3bLJj7/a6NMUxO/tmyOtqBuP2ptH27nU/qrOFtcGa7TnVhOPDef1xil9L1w5/y/a96r6q+9vzAfhpN2Nq7OBiMgy91W2L6+vgTWOvwnSwX4ueSDFd7S8xVWprZ2Iaii3ifcpSuQ8Aa/di6kPk4yI/hQpUNtnJuPEvz+zvxtTFe1TX/FpM45pEn5gCOHIrpmZ5Io1PqJKZo+gcRilEzx2zmnQtienkP9LrtW/EtPJkur2v4p8CgF92I6YuNCokPjQSnfCRfSeWR/vV6Iklpum1P0/LmG5jqe7z8J8AgJ93OaYhiP+FRwUqi18OhUPO7J+JqRMiPp6M6X+B1TFdYrl+KvWIKYAjF2Oqwrfw8ZHIxRB97wuoHFM5V3F8LZzp2Hzf6dv/tFDEshJuYgpgz7WYVkMVY5MDKZFLUzyJ7uyHmKo9GR+yIqZ+yT8ln4mpE9bVOdV1a7GM547XC/v6vWnoKwBx8ckUAFBDTAGgAWIKAA0QUwBogJgCQAPEFAAaKGI6zzPDMAxzc4gpwzDMxzPbP8yeKw7REayoAAAAAElFTkSuQmCC" InformativeScreenshot="d008e5cb99247d4588e75917ffa1d263.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="17, 144, 419, 33" ElementType="Text" FriendlyName="'Client Name'" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='hdr1' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='hdr1' type='' tag='TD' class='lookup_grid_hdr' aaname='Client Name  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Client Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAeCAYAAACR+v1yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIVSURBVHhe7dnRcaswEEBRClM9KoMyKIMaXID/XYZLUEDahZXAthw2b97H1cyZ2CAB+bkRk+H5fCYAwDXEFAAcbDF9PB7pdrsBAL6g7SSmAHABMQUAB8QUABwQUwBwQEwBwAExBQAHxBQAHBBTAHDwRUznNIYhDYMKaZzl3DymsByLU/P5cI1OU0xhnA/H5zHke2/XlnudzQWAf6kzphLSMKZZjpWwSVA9ArqZUnwRSI3pMMQ0rceIKYD/RF9Ml51itRNtvdmZ7gFcxEnWSJxjzOHM53Kom93vNv94rRzQNqbyXefUz7DcK+q5mEZzrf2PQAl5Of7m9wWARldMNUZ5N3jmVUxzhHWd3XFqNOVcnqdR+7Qz1Sgua6uYlmvqummdIztpjbB9vhJqu+Ou13/8nQHA+NOY5qCt4bJsxHTnadd3xFQjOoSQf9q5Gs6siqk8v6w9RFevWWF3CqBPV0x/+5pfYnoW4YsxXT7bUJe58oouAT3uTPtienZfAPikL6bV63A5VgJ18g8o+9m+vlfBvB7TLZ46t4ph/bxdMW3W2Bi3zwEArc6YriQ2ErBqp2pjWIWx3kFu8XwbU3OfbX5Rx1S/N2GUe4Wwz+2L6X6uXINXfAD9vogpAOAVYgoADogpADggpgDggJgCgANiCgAOiCkAOCCmAOCAmAKAg0NM7/d7YjAYDMZ3Q9tJTBkMBuPCKO1M6Qfo9/3RY2mlVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NClick.Target>
-              </uix:NClick>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="Info" Message="[&quot;Client is selected&quot;]" />
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="1, 187, 898, 790" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="7e76c2099631fb3d0c072c93488af6ba.jpg" Selector="&lt;html app='chrome.exe' title='Matching Values' /&gt;" Title="Matching Values" Url="https://www.gofileroom.com/lookupvalues.asp?RefPage=taxfolder&amp;Index=0000000001&amp;Criteria=*" />
-        </uix:NApplicationCard.TargetApp>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </uix:NApplicationCard>
-    </Sequence>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Client Name'" sap:VirtualizedContainerService.HintSize="952,182.4" sap2010:WorkflowViewState.IdRef="NClick_128" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/lookupvalues.asp?RefPage=taxfolder&amp;Index=0000000001&amp;Criteria=ACCENTURE*" DesignTimeRectangle="17, 176, 419, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='1' type='' tag='TD' class='lookup_grid_data' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; ACCENTURE' /&gt;" Guid="f29e47d3-beeb-4013-b12c-db75153f5ad1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAYCAYAAABHox5vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIFSURBVHhe7dm7kYMwFEBROqQsSqENZ0qcuwRCDxVo9XvogbT8LEe+Z+bNeiUMbHIXj7v3+239vF4v+3g8GIZhmAsj7SSmDMMwH0wR0+fzaQEA10g7iSkAfICYAkADxBQAGiCmANAAMQWABm7H1Ayd7frRTun3bLJj7/a6NMUxO/tmyOtqBuP2ptH27nU/qrOFtcGa7TnVhOPDef1xil9L1w5/y/a96r6q+9vzAfhpN2Nq7OBiMgy91W2L6+vgTWOvwnSwX4ueSDFd7S8xVWprZ2Iaii3ifcpSuQ8Aa/di6kPk4yI/hQpUNtnJuPEvz+zvxtTFe1TX/FpM45pEn5gCOHIrpmZ5Io1PqJKZo+gcRilEzx2zmnQtienkP9LrtW/EtPJkur2v4p8CgF92I6YuNCokPjQSnfCRfSeWR/vV6Iklpum1P0/LmG5jqe7z8J8AgJ93OaYhiP+FRwUqi18OhUPO7J+JqRMiPp6M6X+B1TFdYrl+KvWIKYAjF2Oqwrfw8ZHIxRB97wuoHFM5V3F8LZzp2Hzf6dv/tFDEshJuYgpgz7WYVkMVY5MDKZFLUzyJ7uyHmKo9GR+yIqZ+yT8ln4mpE9bVOdV1a7GM547XC/v6vWnoKwBx8ckUAFBDTAGgAWIKAA0QUwBogJgCQAPEFAAaKGI6zzPDMAxzc4gpwzDMxzPbP8yeKw7REayoAAAAAElFTkSuQmCC" InformativeScreenshot="d008e5cb99247d4588e75917ffa1d263.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="17, 144, 419, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='hdr1' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='hdr1' type='' tag='TD' class='lookup_grid_hdr' aaname='Client Name  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Client Name' /&gt;" Guid="95325688-be01-4326-be31-2936f7d76122" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAeCAYAAACR+v1yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIVSURBVHhe7dnRcaswEEBRClM9KoMyKIMaXID/XYZLUEDahZXAthw2b97H1cyZ2CAB+bkRk+H5fCYAwDXEFAAcbDF9PB7pdrsBAL6g7SSmAHABMQUAB8QUABwQUwBwQEwBwAExBQAHxBQAHBBTAHDwRUznNIYhDYMKaZzl3DymsByLU/P5cI1OU0xhnA/H5zHke2/XlnudzQWAf6kzphLSMKZZjpWwSVA9ArqZUnwRSI3pMMQ0rceIKYD/RF9Ml51itRNtvdmZ7gFcxEnWSJxjzOHM53Kom93vNv94rRzQNqbyXefUz7DcK+q5mEZzrf2PQAl5Of7m9wWARldMNUZ5N3jmVUxzhHWd3XFqNOVcnqdR+7Qz1Sgua6uYlmvqummdIztpjbB9vhJqu+Ou13/8nQHA+NOY5qCt4bJsxHTnadd3xFQjOoSQf9q5Gs6siqk8v6w9RFevWWF3CqBPV0x/+5pfYnoW4YsxXT7bUJe58oouAT3uTPtienZfAPikL6bV63A5VgJ18g8o+9m+vlfBvB7TLZ46t4ph/bxdMW3W2Bi3zwEArc6YriQ2ErBqp2pjWIWx3kFu8XwbU3OfbX5Rx1S/N2GUe4Wwz+2L6X6uXINXfAD9vogpAOAVYgoADogpADggpgDggJgCgANiCgAOiCkAOCCmAOCAmAKAg0NM7/d7YjAYDMZ3Q9tJTBkMBuPCKO1M6Qfo9/3RY2mlVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1, 187, 898, 790" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="7e76c2099631fb3d0c072c93488af6ba.jpg" Selector="&lt;html app='chrome.exe' title='Matching Values' /&gt;" Title="Matching Values" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

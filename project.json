@@ -5,10 +5,10 @@
   "main": "Main.xaml",
   "dependencies": {
     "ReporterExcel": "[1.0.59]",
-    "UiPath.Excel.Activities": "[2.24.3]",
-    "UiPath.System.Activities": "[24.10.6]",
-    "UiPath.Testing.Activities": "[24.10.3]",
-    "UiPath.UIAutomation.Activities": "[24.10.10]"
+    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.System.Activities": "[25.2.2]",
+    "UiPath.Testing.Activities": "[24.10.4]",
+    "UiPath.UIAutomation.Activities": "[24.10.11]"
   },
   "webServices": [],
   "entitiesStores": [],

@@ -1,12 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SequencetocheckStatus" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SequencetocheckStatus" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="URL" Type="InArgument(x:String)" />
+    <x:Property Name="inDictTestSummaryReport" Type="InArgument(scg:Dictionary(x:String, sd:DataTable))" />
   </x:Members>
   <this:SequencetocheckStatus.URL>
     <InArgument x:TypeArguments="x:String" />
   </this:SequencetocheckStatus.URL>
-  <sap:VirtualizedContainerService.HintSize>1408.8,662.4</sap:VirtualizedContainerService.HintSize>
+  <this:SequencetocheckStatus.inDictTestSummaryReport>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" />
+  </this:SequencetocheckStatus.inDictTestSummaryReport>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2728.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -43,6 +47,10 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -124,15 +132,16 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="512,597.6" sap2010:WorkflowViewState.IdRef="Sequence_158">
+  <Sequence sap:VirtualizedContainerService.HintSize="707.2,2664" sap2010:WorkflowViewState.IdRef="Sequence_158">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence to check Status" sap:VirtualizedContainerService.HintSize="449.6,508.8" sap2010:WorkflowViewState.IdRef="Sequence_150">
+    <Sequence DisplayName="Sequence to check Status" sap:VirtualizedContainerService.HintSize="644.8,2575.2" sap2010:WorkflowViewState.IdRef="Sequence_150">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Browser" Name="BrsWnd" />
         <Variable x:TypeArguments="x:String" Name="NewStatus" />
@@ -143,13 +152,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Browser Chrome: Add Documents | GoFileRoom" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4a1c0266-c434-475b-979f-a8a83139de3e" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Browser Chrome: Add Documents | GoFileRoom" sap:VirtualizedContainerService.HintSize="582.4,1771.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4a1c0266-c434-475b-979f-a8a83139de3e" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1413.6" sap2010:WorkflowViewState.IdRef="Sequence_149">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548.8,1522.4" sap2010:WorkflowViewState.IdRef="Sequence_149">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="GetText" />
               </Sequence.Variables>
@@ -158,7 +167,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'SurePrep: Create'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" TextString="[GetText]" Version="V3">
+              <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'SurePrep: Create'" sap:VirtualizedContainerService.HintSize="486.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" TextString="[GetText]" Version="V3">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=MyworkFrameset.asp&amp;mode=&amp;folderid=0000000LS9&amp;filingid=1264650&amp;workflowid=10029&amp;servicetypeid=37&amp;tab=2&amp;t=" CvType="AnyWordGroup" DesignTimeRectangle="400, 208, 216, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='SurePrepCell' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='SurePrepStatusText' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='SurePrepCell' tag='TABLE' /&gt;&lt;webctrl id='SurePrepStatusText' type='' tag='LABEL' class='' /&gt;" Guid="570a5569-3e3d-4750-9d86-5dec401ad9e0" InformativeScreenshot="e6cf28f3d338322971524ee5c4db44d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Add Documents | GoFileRoom' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -169,27 +178,72 @@
                   </uix:TargetAnchorable>
                 </uix:NGetText.Target>
               </uix:NGetText>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[GetText]" />
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not GetText.Contains(&quot;SurePrep: In Processing&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="449.6,463.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_5" MaxIterations="5">
-                <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,316.8" sap2010:WorkflowViewState.IdRef="Sequence_157">
+              <TryCatch DisplayName="Try Catch 'GFR Status change'" sap:VirtualizedContainerService.HintSize="486.4,694.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch.Try>
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not GetText.Contains(&quot;SurePrep: In Processing&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="449.6,431.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_5" MaxIterations="[Cint(in_Config(&quot;retry_Count&quot;))]">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,316.8" sap2010:WorkflowViewState.IdRef="Sequence_157">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="353.6,114.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V3" />
+                        <Delay DisplayName="Delay 'GFR status change'" Duration="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Retry_Wait&quot;)))]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="353.6,114.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V3" />
-                    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  </Sequence>
-                </ui:InterruptibleWhile.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InterruptibleWhile>
-              <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'SurePrep: Pending Review'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" TextString="[NewStatus]" Version="V3">
+                  </ui:InterruptibleWhile>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence sap:VirtualizedContainerService.HintSize="416,787.2" sap2010:WorkflowViewState.IdRef="Sequence_159">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message 'TC_23'" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_75" Message="[&quot;TC_23 - &quot; + &quot;Verify once the binder is submitted then the status of the that tax folder in GFR gets changed.&quot; + &quot; - Passed&quot;]" />
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Fail"]</InArgument>
+                            <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments">["Verify once the binder is submitted then the status of the that tax folder in GFR gets changed."]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[inDictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+                            <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_23"}]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <ui:LogMessage DisplayName="Log Message 'TC_24'" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_76" Message="[&quot;TC_24 - &quot; + &quot;Verify when will the GFR status get changed and button will be enabled.&quot; + &quot; - Passed&quot;]" />
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="353.6,81.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Fail"]</InArgument>
+                            <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments">["Verify when will the GFR status get changed and button will be enabled."]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[inDictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+                            <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_24"}]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
+              <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="486.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" TextString="[NewStatus]" Version="V3">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=Myworkframeset.asp&amp;mode=&amp;folderid=0000000LRX&amp;filingid=1264639&amp;workflowid=10029&amp;servicetypeid=37&amp;tab=1&amp;t=" CvType="AnyWordGroup" DesignTimeRectangle="402, 208, 216, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='SurePrepCell' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='SurePrepStatusText' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='SurePrepCell' tag='TABLE' /&gt;&lt;webctrl id='SurePrepStatusText' type='' tag='LABEL' class='' /&gt;" Guid="b05e5895-79f6-4c11-9699-1cea429f85db" ImageBase64="" InformativeScreenshot="17b8bd8d37fe2f6ae31636ac22a0bce6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://qed.gofileroom.com/home.html' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
                 </uix:NGetText.Target>
@@ -200,8 +254,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NGetText>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;Status is &quot;+NewStatus]" />
-              <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'gofileroom'" sap:VirtualizedContainerService.HintSize="449.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" Version="V3">
+              <ui:LogMessage DisplayName="Log Message 'Status'" sap:VirtualizedContainerService.HintSize="486.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;Status is &quot;+NewStatus]" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'gofileroom'" sap:VirtualizedContainerService.HintSize="486.4,182.4" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4a1c0266-c434-475b-979f-a8a83139de3e" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=MyworkFrameset.asp&amp;mode=&amp;folderid=0000000LSF&amp;filingid=1264654&amp;workflowid=10029&amp;servicetypeid=37&amp;tab=2&amp;t=" DesignTimeRectangle="11, 173, 19, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='' /&gt;" Guid="b2cf1233-2ef8-4dfa-b6aa-b6c19c194d90" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVEhL7ZI9CoMwGIZ7DWcHB39A3Bx0ES8gCLo56DU8j6N4F8FjiAf4yhtMMG2+tBRKlz7wQvzy5ikNudEX+b18miaqqoo8zxPBGrNXWOX7vlNRFOS6LoVhSHEci2CNGfbQ4bDKy7KkKIooSRJjsIcOByvH334Uj+OofSPocFfEytu2VYI8z2lZFjG/imXQNcHK0zQVB5umoW3bzqmOlKNrgpVnWSYO1nVN67qeUx0pR9cEK+/7XhzEnQZBoO7VcRwVKUfXBCuf51kdxvPD0+u6Ts2uQdcEKwe476vE933tG0GHwyo/juPpB67BHjocVrkEz3AYBvEkEazl07TxlvxT/nIjf7kBojsts5uVC7hFKAAAAABJRU5ErkJggg==" InformativeScreenshot="1561bb81ed88434ee4a9904caaa15bf6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Add Documents | GoFileRoom' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -220,13 +274,31 @@
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_73" Message="[&quot;TC_23 - &quot; + &quot;TC_Verify once the binder is submitted then the status of the that tax folder in GFR gets changed.&quot; + &quot; - Passed&quot;]" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_74" Message="[&quot;TC_24 - &quot; + &quot;TC_Verify when will the GFR status get changed and button will be enabled.&quot; + &quot; - Passed&quot;]" />
+      <ui:LogMessage DisplayName="Log Message 'TC_23'" sap:VirtualizedContainerService.HintSize="552,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_73" Message="[&quot;TC_23 - &quot; + &quot;Verify once the binder is submitted then the status of the that tax folder in GFR gets changed.&quot; + &quot; - Passed&quot;]" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="552,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Pass"]</InArgument>
+          <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[inDictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_23"}]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:LogMessage DisplayName="Log Message 'TC_24'" sap:VirtualizedContainerService.HintSize="552,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_74" Message="[&quot;TC_24 - &quot; + &quot;Verify when will the GFR status get changed and button will be enabled.&quot; + &quot; - Passed&quot;]" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="552,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Pass"]</InArgument>
+          <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_str_SubComponent">Binder Creation_GFR</InArgument>
+          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inOut_dtTestSummaryReport">[inDictTestSummaryReport("Binder Creation_GFR")]</InOutArgument>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"TC_24"}]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
     </Sequence>
   </Sequence>
 </Activity>
