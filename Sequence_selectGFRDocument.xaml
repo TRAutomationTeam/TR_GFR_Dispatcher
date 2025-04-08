@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1190.4,4516.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,3581.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,7 +140,7 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="704,4452" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="724.8,3516.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="aastate" />
       <Variable x:TypeArguments="x:String" Name="automationidValue" />
@@ -153,22 +153,26 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Select GFR Documents For Workflow 1516836" sap:VirtualizedContainerService.HintSize="641.6,4363.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Select GFR Documents For Workflow 1516836" sap:VirtualizedContainerService.HintSize="662.4,3428" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,4048.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628.8,3113.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Default="1" Name="idx" />
+              <Variable x:TypeArguments="x:Int32" Name="idx">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Int32" Value="1" />
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:FindChildren Children="[checkboxeslist]" DisplayName="Find Children 'column header'" Filter="&lt;ctrl role = 'list item'/&gt;" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren Children="[checkboxeslist]" DisplayName="Find Children 'column header'" Filter="&lt;ctrl role = 'list item'/&gt;" sap:VirtualizedContainerService.HintSize="566.4,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="16d0583a-6105-4f97-9c14-67781867bb18" InformativeScreenshot="726d2dea88809034f14829840b0b35c2">
                   <ui:Target.TimeoutMS>
@@ -180,7 +184,7 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <Assign DisplayName="Assign 'Count'" sap:VirtualizedContainerService.HintSize="545.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign 'Count'" sap:VirtualizedContainerService.HintSize="566.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
               </Assign.To>
@@ -188,17 +192,17 @@
                 <InArgument x:TypeArguments="x:Int32">[checkboxeslist.Count]</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="automationid" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="545.6,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[automationidValue]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="automationid" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="566.4,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[automationidValue]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable CVScreenId="9e564a05-9218-4929-84a5-1bbd9d288997" DesignTimeRectangle="24, 70, 19, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='chkrow' idx='{0}' /&gt;&quot;, idx)]" Guid="d0ec2859-0070-42e4-ab25-a3e8be2405d8" ImageBase64="" InformativeScreenshot="3e10fb38913839fb463b4f522a807a15.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aastate" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="545.6,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[aastate]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aastate" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="566.4,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[aastate]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable CVScreenId="9e564a05-9218-4929-84a5-1bbd9d288997" DesignTimeRectangle="24, 70, 19, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='chkrow' idx='{0}' /&gt;&quot;, idx)]" Guid="d0ec2859-0070-42e4-ab25-a3e8be2405d8" ImageBase64="" InformativeScreenshot="3e10fb38913839fb463b4f522a807a15.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="545.6,1803.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="566.4,868" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -206,29 +210,35 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[idx &lt; = Count]" DisplayName="While 'check if checkbox are enabled'" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="20">
+                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[idx &lt; = Count]" DisplayName="While 'check if checkbox are enabled'" sap:VirtualizedContainerService.HintSize="529.6,604.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="20">
                   <ui:InterruptibleWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,490.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aastate" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="545.6,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[aastate]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
+                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aastate" DisplayName="Get Attribute 'CheckBox'" sap:VirtualizedContainerService.HintSize="433.6,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[aastate]" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
                         <uix:NGetAttributeGeneric.Target>
                           <uix:TargetAnchorable CVScreenId="9e564a05-9218-4929-84a5-1bbd9d288997" DesignTimeRectangle="24, 70, 19, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='chkrow' idx='{0}' /&gt;&quot;, idx)]" Guid="d0ec2859-0070-42e4-ab25-a3e8be2405d8" ImageBase64="" InformativeScreenshot="3e10fb38913839fb463b4f522a807a15.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                         </uix:NGetAttributeGeneric.Target>
                       </uix:NGetAttributeGeneric>
-                      <If Condition="[not aastate = &quot;focusable&quot;]" DisplayName="If 'Focusable'" sap:VirtualizedContainerService.HintSize="545.6,1200.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[not aastate = &quot;focusable&quot;]" DisplayName="If 'Focusable'" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,925.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not aastate = &quot;focusable&quot;]" DisplayName="While 'Focusable'" sap:VirtualizedContainerService.HintSize="449.6,836.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not aastate = &quot;focusable&quot;]" DisplayName="While 'Focusable'" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
                               <ui:InterruptibleWhile.Body>
                                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,699.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -259,6 +269,12 @@
                                   </uix:NGetAttributeGeneric>
                                 </Sequence>
                               </ui:InterruptibleWhile.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                             </ui:InterruptibleWhile>
                           </Sequence>
                         </If.Then>
@@ -272,7 +288,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <Assign DisplayName="Assign 'idx'" sap:VirtualizedContainerService.HintSize="545.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign DisplayName="Assign 'idx'" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[idx]</OutArgument>
                         </Assign.To>
@@ -291,10 +307,10 @@
                 </ui:InterruptibleWhile>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502.4,1607.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="532.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -302,7 +318,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="496,1536" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,1359.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -348,7 +364,7 @@
                           </uix:TargetAnchorable>
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="45f1965c-ace1-465a-9b34-36a6d8f1f42e" DisplayName="CV Screen Scope 'TABLE  HeaderTbl'" sap:VirtualizedContainerService.HintSize="433.6,599.2" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="45f1965c-ace1-465a-9b34-36a6d8f1f42e" DisplayName="CV Screen Scope 'TABLE  HeaderTbl'" sap:VirtualizedContainerService.HintSize="433.6,559.2" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
                         <p:CVScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -469,7 +485,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <Assign DisplayName="Assign 'selector'" sap:VirtualizedContainerService.HintSize="545.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Assign 'selector'" sap:VirtualizedContainerService.HintSize="566.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[selector]</OutArgument>
               </Assign.To>
@@ -477,7 +493,7 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElement" sap:VirtualizedContainerService.HintSize="545.6,1124.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[checkboxeslist]">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElement" sap:VirtualizedContainerService.HintSize="566.4,1124.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[checkboxeslist]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
@@ -537,7 +553,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="545.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="566.4,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d915d76a-6590-404c-8fbf-df26313ec6df" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable CVScreenId="ea232dd8-8f52-4d77-973d-7fbe1c9310ce" CvElementArea="539, 231, 83, 28" CvTextArea="569, 241, 23, 11" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="543, 234, 80, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Add' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Add' role='push button' automationid='' check:text='Add' /&gt;" Guid="04768b6d-7c10-47ea-9754-8331ba44a0c4" InformativeScreenshot="35fd1f84431e23e36b8ab30dd1c63309.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>

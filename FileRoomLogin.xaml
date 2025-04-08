@@ -10,6 +10,7 @@
     <x:Property Name="in_strJobDetailURL" Type="InArgument(x:String)" />
     <x:Property Name="in_strFileroomurl" Type="InArgument(x:String)" />
     <x:Property Name="in_strFTaxYear" Type="InArgument(x:String)" />
+    <x:Property Name="out_BinderId" Type="OutArgument(x:String)" />
   </x:Members>
   <this:FileRoomLogin.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
@@ -32,7 +33,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1664.8,10084.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,7099.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FileRoomLogin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -151,25 +152,24 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="FileRoomLogin" sap:VirtualizedContainerService.HintSize="1675.2,10020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FileRoomLogin" sap:VirtualizedContainerService.HintSize="1110.4,7034.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_FUsername" />
       <Variable x:TypeArguments="x:String" Name="UsernameTr" />
       <Variable x:TypeArguments="ss:SecureString" Name="PasswordTr" />
-      <Variable x:TypeArguments="x:String" Name="strBinderId" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="userEmailID" CacheStrategy="None" DisplayName="Get Asset 'Fileroom Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1612.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="userEmailID" CacheStrategy="None" DisplayName="Get Asset 'Fileroom Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1048,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[str_FUsername]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1612.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[PasswordTr]" Username="[UsernameTr]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome - Login to Production.sureprep.com" sap:VirtualizedContainerService.HintSize="1612.8,6704.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V2" WindowResize="Maximize">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1048,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[PasswordTr]" Username="[UsernameTr]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome - Login to Production.sureprep.com" sap:VirtualizedContainerService.HintSize="1048,3759.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -180,7 +180,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1579.2,6456" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,3510.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ss:SecureString" Name="SecureLogin" />
             </Sequence.Variables>
@@ -190,12 +190,12 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign in with Thomson Re…'" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign in with Thomson Re…'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="production.sureprep.com" CVScreenId="ddd119f7-ee59-4bd9-b21a-38c08fba5da0" DesignTimeRectangle="1401, 480, 348, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='boldtxt' parentid='CIAMlogin' tag='DIV' /&gt;" Guid="28e7f66a-cd1b-450f-b12e-7194f009be2d" InformativeScreenshot="c1ac757863e88c7eed719749c2e25ac2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SurePrep FileRoom Login' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Sign in with Thomson Re…'" sap:VirtualizedContainerService.HintSize="1516.8,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Sign in with Thomson Re…'" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1014.4,1736.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
@@ -352,12 +352,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SUBMIT'" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SUBMIT'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="production.sureprep.com/Ciam/AuthenticateCiamUser" CVScreenId="82458ee4-06c1-4c19-aef7-1abbb5050009" DesignTimeRectangle="772, 639, 395, 52" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='lognSSOPnl' tableRow='3' tag='DIV' /&gt;" Guid="ab3b560f-48ba-45ef-bf1d-266a96c0806d" InformativeScreenshot="41354156d25d2fba31c9dfbc96374fd7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State - Restore pages" sap:VirtualizedContainerService.HintSize="1516.8,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
+            <uix:NCheckState DisplayName="Check App State - Restore pages" sap:VirtualizedContainerService.HintSize="952,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -417,8 +417,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1516.8,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_strFileroomurl]" Version="V3" />
-            <uix:NCheckState DisplayName="Check App State 'Create New Binder'" sap:VirtualizedContainerService.HintSize="1516.8,984" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="952,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_strFileroomurl]" Version="V3" />
+            <uix:NCheckState DisplayName="Check App State 'Create New Binder'" sap:VirtualizedContainerService.HintSize="952,808" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <sap:WorkflowViewStateService.ViewState>
@@ -439,7 +439,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,733.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,557.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -455,20 +455,6 @@
                       <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listTestCaseID">[New List(Of String) From {"VC_33"}]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Output - Invoke Workflow File (Reporting\TestSummary_Output.xaml)" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Output.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_TestSummaryReport">[inDictTestSummaryReport("Binder Creation_GFR")]</InArgument>
-                      <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Component">Binder Creation_GFR</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_binderID">[strBinderId]</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
                   <Throw Exception="[new BusinessRuleException(&quot;Fileroom is not logged in&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
@@ -476,7 +462,7 @@
                 <uix:TargetAnchorable BrowserURL="production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="2aa35378-d280-4f19-a447-bf840d7cf230" DesignTimeRectangle="36, 176, 205, 47" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='btnOpenSubmissionWizardLast' tableRow='1' tag='BUTTON' /&gt;" Guid="ae31e403-48a1-4c3e-8f51-2dc8bb331929" InformativeScreenshot="1436496d0944bc0c65971d94606fd5fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Tax Year Dropdown" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Timeout="120" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Tax Year Dropdown" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Timeout="120" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing#" CvElementArea="810, 169, 74, 33" CvTextArea="815, 180, 33, 13" CvType="InputBox" DesignTimeRectangle="814, 172, 68, 26" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='TABLE' class='fr-command-button-tbl left' /&gt;&lt;webctrl aria-role='option' tag='SPAN' visibleinnertext='202*' /&gt;" Guid="ad5cbff5-1142-43eb-bc18-f83f28f9d085" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAeCAYAAACPOlitAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJeSURBVGhD7ZY/a9tAGIfzXbL0Qxh/kEyZugS6dQg0HWLoELx49WB3aEtA7mCCCQgPNiUmXmJIEQiSLGlAIGOQCA6WCfz6nnVyFN9ZJymFLu/BA9K9uvdOj+6Pdt4d/EDlc4/RINzsVI56+DIMGQ3CzVrQ7vuvTAoWZIAFGWBBBliQARZkgAUZYEEGWJABFmSABRnIFnQR4HWJ4N+5+HAo48cjnHkRFjIqSjj10GpaMscYl3MZkGUxD2D/7ObLXwgLtb6DfW0sjY1Wf4yqNqaSLej4HHvrwXbxceAjpNfwJwO6P8fZlG7mM3Ta8QtXmw6uhJClj5NVGwt7dSlDxOtj2NNnis/QEnWZ+ZP6PJAcN6KW9AG8mwxJNjoe9U8ldPNJyhakYMVSaBC7zQf4dOkMktkiacv6fqouzalHEiJcnmpi6fxKzEDjBrdLaktFL+lFDpYBOo3NuJ6Cgn5hSKticXctl8cj7PrmM9e4ooGG7mijPqY6mG1pJ0jlV2I52CqpnBxBAUEWPk0eqYcnDNt0vxJEnSnPxfuOmMKv64mGA4dii3tHM7038ivxnCiSyssR5BTUxcnvJ9qMI1pSdlxXcAZVm24sJ3hATdmENfnfQkrSupSQIzALOhzJjZW+bHL6CArsQft9f1UX3mtOqG3530paUkk5gkxByVdH4KOldCBPsSXNom/yFFufUskplsyMZ/yZjJRllZ3/HyAk0W9FWTmCTEEdT+jXlLmHmnhG9x9EL/s9+Q9anVj6cnuRnT89jv9JpiCGBRlhQQZYkAEWZIAFGWBBBhRBjErlqIe/s44+LkgD3gMAAAAASUVORK5CYII=" InformativeScreenshot="64fda85c1a8073063de03dca16977cd4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
@@ -487,7 +473,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Tax Year" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Tax Year" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing#" DesignTimeRectangle="656, 180, 61, 24" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='option' type='' tag='LI' class='k-item k-state-selected k-state-focused' aaname='{0}' check:innerText='{0}' /&gt;&quot;, in_strFTaxYear)]" Guid="02695e51-fcc6-445c-b614-5aa0f2a4ed46" InformativeScreenshot="04c3e7b1682d000f83e27b9f21c467fd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
@@ -504,12 +490,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1516.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Text="[in_strDescription]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Text="[in_strDescription]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="85657aa4-001a-419d-bffa-b983a5b2227d" CvElementArea="1659, 183, 254, 37" CvType="InputBox" DesignTimeRectangle="1699, 189, 191, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='txtSearch' type='text' tag='INPUT' class='fr-searchbox' aaname='' /&gt;" Guid="39d36008-1313-4029-bea0-6a05f07113f0" InformativeScreenshot="0c81cacbfeb3df4831e822dbf044a9dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NGetText DelayBefore="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;))).TotalMilliseconds]" DisplayName="Get Text 'Binder ID'" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" TextString="[strBinderId]" Version="V3">
+            <uix:NGetText DelayBefore="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;))).TotalMilliseconds]" DisplayName="Get Text 'Binder ID'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" TextString="[out_BinderId]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="b36c4e8f-2112-4330-a983-6091158f02a2" CvTextArea="706, 354, 63, 17" CvType="AnyWordGroup" DesignTimeRectangle="885, 343, 163, 37" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='grid' class='k-selectable' tag='TABLE' /&gt;&lt;webctrl class='auto-ellipsis' type='' tag='TD' /&gt;" Guid="2931269e-bc78-40d4-9f28-1c4c462d12d9" InformativeScreenshot="28bf206e8c6553cf2d7e727050cdcc07.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -520,8 +506,8 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Binder ID is &quot; +strBinderId]" />
-            <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="1516.8,2826.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Binder ID is &quot; +out_BinderId]" />
+            <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="761.6,3137.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_InputFilePath" />
                 <Variable x:TypeArguments="x:String" Name="str_InputSheetname" />
@@ -600,10 +586,10 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="out_RowIndex">[str_ReporterRowIndex]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="699.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="699.2,409.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -612,18 +598,23 @@
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                         <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:Object">[dt_InputDataUpdated(0)("BinderID")]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Object">[dt_InputDataUpdated(0)("ExpectedBinderID")]</OutArgument>
                         </ui:AssignOperation.To>
                         <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">[strBinderId]</InArgument>
+                          <InArgument x:TypeArguments="x:Object">[out_BinderId]</InArgument>
                         </ui:AssignOperation.Value>
                       </ui:AssignOperation>
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,140.8" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
               </Sequence>
-              <Sequence DisplayName="Update Data" sap:VirtualizedContainerService.HintSize="699.2,2052.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence DisplayName="Update Data" sap:VirtualizedContainerService.HintSize="699.2,2044.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="db_Connection" />
                   <Variable x:TypeArguments="sd:DataTable" Name="dt_Output" />
@@ -635,7 +626,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[dt_ReporterDataUpdated.RowCount.Equals(0)]" DisplayName="If Row Exists then Update, Else Add" sap:VirtualizedContainerService.HintSize="636.8,1937.6" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[dt_ReporterDataUpdated.RowCount.Equals(0)]" DisplayName="If Row Exists then Update, Else Add" sap:VirtualizedContainerService.HintSize="636.8,1932.8" sap2010:WorkflowViewState.IdRef="If_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -643,13 +634,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="603.2,1518.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="603.2,1516.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Entry not found, Adding entry in reporter file&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Entry not found, Adding entry in reporter file&quot;]" />
                       <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="540.8,1253.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="dr_TempRow" />
@@ -718,7 +709,7 @@
                                   <OutArgument x:TypeArguments="x:Object">[dr_TempRow("BinderID")]</OutArgument>
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">[strBinderId]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[out_BinderId]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
@@ -790,29 +781,29 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Entry already exists&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Entry already exists&quot;]" />
                     </Sequence>
                   </If.Else>
                 </If>
               </Sequence>
             </Sequence>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'User'" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'User'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="b8d635f6-c088-4d9d-85a3-894ff74b3225" CvTextArea="1509, 141, 81, 14" CvTextArgument="bhushan na" CvType="Text" DesignTimeRectangle="1510, 137, 82, 19" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='4' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='bhushan na' check:innerText='bhushan na' /&gt;" Guid="61ec98e7-5e29-41fa-86aa-91fe16d0eecb" InformativeScreenshot="8fc7807c8f05fd21dbb950d772f56822.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="1516.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1ef7e2d-563d-4595-a9fd-8a6ad33f543e" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1485, 207, 48, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblchangepassword' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='logout' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblchangepassword' tag='TABLE' /&gt;&lt;webctrl id='logout' type='' tag='A' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="2dfa607f-f7ef-4749-89b0-875718af09e2" InformativeScreenshot="a06ba2780d2031fec56765e6efbcb563.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="1516.8,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="952,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -826,13 +817,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Job Details for LIVE Web Site 117" sap:VirtualizedContainerService.HintSize="1612.8,2876" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1e261d8d-91c1-4395-a6a9-81a666263a5a" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Job Details for LIVE Web Site 117" sap:VirtualizedContainerService.HintSize="1048,2836" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1e261d8d-91c1-4395-a6a9-81a666263a5a" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,2636" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,2596" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_JobDetailStatus" />
             </Sequence.Variables>
@@ -841,7 +832,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="1e261d8d-91c1-4395-a6a9-81a666263a5a" Text="[strBinderId]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="1e261d8d-91c1-4395-a6a9-81a666263a5a" Text="[out_BinderId]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://prod-monitoring.sureprep.com/JobDetails/" CVScreenId="b673a851-bad0-4cbf-85a9-4cfbf9db0a04" CvElementArea="374, 197, 237, 32" CvType="InputBox" DesignTimeRectangle="376, 198, 234, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='MainContent_txtEngagementID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='MainContent_txtEngagementID' tag='INPUT' type='text' class='fntStyle' aaname='' /&gt;" Guid="29977215-4b42-4996-92da-4343e14269df" InformativeScreenshot="20d1375cfa00073bebf6ead61ba1f118.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - Job Details' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -852,7 +843,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Check App State 'Show Job'" sap:VirtualizedContainerService.HintSize="952,725.6" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="1e261d8d-91c1-4395-a6a9-81a666263a5a" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Show Job'" sap:VirtualizedContainerService.HintSize="952,685.6" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="1e261d8d-91c1-4395-a6a9-81a666263a5a" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
                   <sap:WorkflowViewStateService.ViewState>

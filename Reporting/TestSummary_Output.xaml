@@ -5,10 +5,14 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_Component" Type="InArgument(x:String)" />
     <x:Property Name="in_str_binderID" Type="InArgument(x:String)" />
+    <x:Property Name="in_randomString" Type="InArgument(x:String)" />
   </x:Members>
   <this:TestSummary_Output.in_str_binderID>
     <InArgument x:TypeArguments="x:String" />
   </this:TestSummary_Output.in_str_binderID>
+  <this:TestSummary_Output.in_randomString>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestSummary_Output.in_randomString>
   <sap:VirtualizedContainerService.HintSize>1408.8,1395.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -325,7 +329,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_TestSummaryReport]" DisplayName="Write Range Workbook - TestSummary" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Component]" WorkbookPath="[strTestSummaryReportPath.Split(&quot;.xlsx&quot;)(0)+&quot;GFRDispatcher_&quot;+Now.Minute.ToString(&quot;00&quot;) + Now.Second.ToString(&quot;00&quot;) + Now.Millisecond.ToString(&quot;000&quot;)+&quot;.xlsx&quot;]" />
+                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_TestSummaryReport]" DisplayName="Write Range Workbook - TestSummary" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Component]" WorkbookPath="[in_Config(&quot;TestSummary_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_Dispatcher124&quot;+in_randomString.ToString+&quot;.xlsx&quot;]" />
               </Sequence>
             </If.Then>
             <If.Else>
@@ -335,7 +339,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_TestSummaryReport]" DisplayName="Write Range Workbook - TestSummary" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Component]" WorkbookPath="[strTestSummaryReportPath.Split(&quot;.xlsx&quot;)(0)+&quot;GFRDispatcher_BID_&quot;+strBinderID+&quot;.xlsx&quot;]" />
+                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_TestSummaryReport]" DisplayName="Write Range Workbook - TestSummary" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Component]" WorkbookPath="[in_Config(&quot;TestSummary_ReportPath&quot;).ToString().Split(&quot;.xlsx&quot;)(0) + strBinderID + &quot;.xlsx&quot;]" />
               </Sequence>
             </If.Else>
           </If>

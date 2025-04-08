@@ -10,7 +10,7 @@
   <this:SequenceforSelectionofReturnType.in_DictTestSummaryReport>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" />
   </this:SequenceforSelectionofReturnType.in_DictTestSummaryReport>
-  <sap:VirtualizedContainerService.HintSize>1408.8,1986.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112.8,807.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -139,7 +139,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence for Selection of Return Type" sap:VirtualizedContainerService.HintSize="540.8,1921.6" sap2010:WorkflowViewState.IdRef="Sequence_219">
+  <Sequence DisplayName="Sequence for Selection of Return Type" sap:VirtualizedContainerService.HintSize="540.8,742.4" sap2010:WorkflowViewState.IdRef="Sequence_219">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="1040" Name="strBinderType" />
       <Variable x:TypeArguments="x:String" Name="strServiceType" />
@@ -167,7 +167,7 @@
               <OutArgument x:TypeArguments="x:String">[strBinderType]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("BinderType").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("EngagementType").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -181,7 +181,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NCheckState DisplayName="Check App State 'Version Check'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NCheckState_37" Timeout="[Convert.ToDouble(in_Config(&quot;Retry_Wait&quot;))]" Version="V3">
+    <uix:NCheckState DisplayName="Check App State 'Version Check'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_37" Timeout="[Convert.ToDouble(in_Config(&quot;Retry_Wait&quot;))]" Version="V3">
       <uix:NCheckState.IfExists>
         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,679.2" sap2010:WorkflowViewState.IdRef="Sequence_205">
           <sap:WorkflowViewStateService.ViewState>
@@ -245,7 +245,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch Return Type" sap:VirtualizedContainerService.HintSize="478.4,1389.6" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+    <TryCatch DisplayName="Try Catch Return Type" sap:VirtualizedContainerService.HintSize="478.4,210.4" sap2010:WorkflowViewState.IdRef="TryCatch_7">
       <TryCatch.Try>
         <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: GoFileRoom Firm and Service Selection" sap:VirtualizedContainerService.HintSize="553.6,5490.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" OpenMode="Never" ScopeGuid="4b7d2041-fa4c-47ad-a3b9-a981e64af7bd" Timeout="200" Version="V2">
           <uix:NApplicationCard.Body>
@@ -393,7 +393,7 @@
                           <uix:NClick.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="233, 79, 175, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl idx='2' role='combo box' /&gt;" Guid="e8b19920-2ed4-4fc2-8f0e-b98115f12371" InformativeScreenshot="8a1ca32bbc3c046ee4b88fc9052b5b19.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='GoFileRoom Firm and Service Selection' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CvTextArgument="Select Binder Type:" CvType="Text" DesignTimeRectangle="18, 84, 133, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Select Binder Type: ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Select Binder Type: ' role='text' automationid='' check:text='Select Binder Type:' /&gt;" Guid="89200f6f-3198-4af5-b306-8c8c2f231acf" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
@@ -609,10 +609,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422.4,1202.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

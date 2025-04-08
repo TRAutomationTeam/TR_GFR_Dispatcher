@@ -21,7 +21,7 @@
   <this:SequenceforClientUpdate.in_strGetTextclientNumber>
     <InArgument x:TypeArguments="x:String" />
   </this:SequenceforClientUpdate.in_strGetTextclientNumber>
-  <sap:VirtualizedContainerService.HintSize>1408.8,15766.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,17514.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -162,7 +162,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sequence for Client Update" sap:VirtualizedContainerService.HintSize="1172.8,15701.6" sap2010:WorkflowViewState.IdRef="Sequence_256">
+  <Sequence DisplayName="Sequence for Client Update" sap:VirtualizedContainerService.HintSize="1400,17449.6" sap2010:WorkflowViewState.IdRef="Sequence_256">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strEngagement" />
       <Variable x:TypeArguments="x:String" Name="strYear" />
@@ -175,7 +175,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1110.4,274.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_24">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1337.6,274.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_24">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_103">
@@ -215,13 +215,13 @@
               <OutArgument x:TypeArguments="x:String">[out_strDescription]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Description").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("SPClientID").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: My Work | GoFileRoom" sap:VirtualizedContainerService.HintSize="1110.4,15338.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: My Work | GoFileRoom" sap:VirtualizedContainerService.HintSize="1337.6,17086.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -232,7 +232,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1076.8,15098.4" sap2010:WorkflowViewState.IdRef="Sequence_257">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1304,16846.4" sap2010:WorkflowViewState.IdRef="Sequence_257">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ClientNumber" />
               <Variable x:TypeArguments="x:String" Name="DescForDoc" />
@@ -251,7 +251,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1014.4,8785.6" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1241.6,8787.2" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -259,13 +259,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="611.2,8522.4" sap2010:WorkflowViewState.IdRef="Sequence_280">
+                <Sequence sap:VirtualizedContainerService.HintSize="515.2,8524" sap2010:WorkflowViewState.IdRef="Sequence_280">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetText DisplayName="Get Text 'Client Number'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[ClientNumber]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text 'Client Number'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[ClientNumber]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newaddtaxflowfolder.asp?serviceid=37" DesignTimeRectangle="715, 241, 230, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tableCol='8' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='TEXT' tag='INPUT' class='dropdownBox' /&gt;" Guid="2a855678-581a-4de6-a297-8d42b2b0ef57" ImageBase64="" InformativeScreenshot="05dd2885953ecd6c99f612fdf847adf5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -276,7 +276,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <If Condition="[in_strGetTextclientNumber = ClientNumber]" sap:VirtualizedContainerService.HintSize="548.8,1034.4" sap2010:WorkflowViewState.IdRef="If_15">
+                  <If Condition="[in_strGetTextclientNumber = ClientNumber]" sap:VirtualizedContainerService.HintSize="452.8,1034.4" sap2010:WorkflowViewState.IdRef="If_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,7 +322,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NSelectItem DisplayName="Select Item 'Engagement'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="[strEngagement]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+                  <uix:NSelectItem DisplayName="Select Item 'Engagement'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="[strEngagement]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="12">
                         <x:String></x:String>
@@ -342,7 +342,7 @@
                     <uix:NSelectItem.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/newaddtaxflowfolder.asp?serviceid=1" DesignTimeRectangle="157, 317, 213, 19" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tableRow='1' tag='SELECT' class='regdropdownBox' /&gt;" Guid="f503fbee-6ed2-4d63-964f-65fe29504573" ImageBase64="" InformativeScreenshot="d5f89f77631393cf2e337aa24ab4b7b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="57, 318, 97, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Engagement: ' check:innerText='Engagement:' /&gt;" Guid="91aa990a-ae27-4371-a64d-f20a8f4ff451" SearchSteps="FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -355,12 +355,12 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NSelectItem>
-                  <uix:NGetText DisplayName="Get Text 'SELECT Engagement'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextEngagement]" Version="V4">
+                  <uix:NGetText DisplayName="Get Text 'SELECT Engagement'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextEngagement]" Version="V4">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="931234d7-f3f6-446e-99c0-247723bc1ff1" DesignTimeRectangle="157, 309, 213, 19" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='2' tableRow='1' tag='TABLE' idx='2' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" Guid="f9b2d35f-5bf4-471a-b91f-f388156748c3" ImageBase64="" InformativeScreenshot="2a4c3773222e692225bf4fc529f4d1e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <If Condition="[strEngagement = GetTextEngagement]" sap:VirtualizedContainerService.HintSize="548.8,1210.4" sap2010:WorkflowViewState.IdRef="If_16">
+                  <If Condition="[strEngagement = GetTextEngagement]" sap:VirtualizedContainerService.HintSize="452.8,1210.4" sap2010:WorkflowViewState.IdRef="If_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -407,7 +407,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Year'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[strYear]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Year'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[strYear]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/newaddtaxflowfolder.asp?serviceid=1" DesignTimeRectangle="799, 311, 63, 19" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tableCol='10' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='year_field' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='year_field' type='' tag='SELECT' class='regdropdownBox' aaname='' /&gt;" Guid="5c958c70-97ca-42d9-ac40-b9fb0d7b9d6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAXCAYAAABQ1fKSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADlSURBVFhH7ZOxDYQwDEUzCAUEZmQLREeRkRgiBUhAwww+/RBy5uBOXGv8pK8kdho/JWZde9JsURksKoMlyajr+nHhIpAgA40n8ilEZaiMDZXBUBkMUTKapqFlWeLpDHpt28bTGTEyuq4jYwyVZUnTNMXqG9TQwx3nXKweESNjnmfK8zwMa609vBDsUUOvqqpw9woxMsA4jichXAR630QAUTIAhBRFEYbHuu/xRdD7hTgZYBiGJOGuCCBSBsDwWZaFr3FHBBArA3jvwyu5i2gZ/6IyGCqDoTIYlzJ2IU8LF4EkGZqeXn+FMf7kx5eHAAAAAElFTkSuQmCC" InformativeScreenshot="bbe51a2a113b5285e8e523a31dcb602b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -418,8 +418,8 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <ui:LogMessage DisplayName="Log Message 'Year'" sap:VirtualizedContainerService.HintSize="548.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Year is : &quot; + in_TransactionItem.SpecificContent(&quot;Year&quot;).ToString + &quot;- Pass&quot;]" />
-                  <uix:NGetText DelayBefore="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;))).TotalMilliseconds]" DisplayName="Get Text 'Year'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextTaxYear]" Version="V4">
+                  <ui:LogMessage DisplayName="Log Message 'Year'" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Year is : &quot; + in_TransactionItem.SpecificContent(&quot;Year&quot;).ToString + &quot;- Pass&quot;]" />
+                  <uix:NGetText DelayBefore="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;))).TotalMilliseconds]" DisplayName="Get Text 'Year'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextTaxYear]" Version="V4">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="65bb1353-a5c0-4e0a-9df3-809fbe270d1c" DesignTimeRectangle="799, 309, 62, 19" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tableCol='10' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='year_field' tableRow='1' tag='SELECT' /&gt;" Guid="53a849eb-740f-4ef9-928f-d2078dfe7aed" ImageBase64="" InformativeScreenshot="64209d166e5af8c4a3bea3666659adb7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -430,7 +430,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,534.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,536" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -438,7 +438,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <Sequence sap:VirtualizedContainerService.HintSize="416,271.2" sap2010:WorkflowViewState.IdRef="Sequence_268">
+                      <Sequence sap:VirtualizedContainerService.HintSize="416,272.8" sap2010:WorkflowViewState.IdRef="Sequence_268">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -492,7 +492,7 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                           </ActivityAction.Argument>
-                          <Sequence sap:VirtualizedContainerService.HintSize="416,935.2" sap2010:WorkflowViewState.IdRef="Sequence_273">
+                          <Sequence sap:VirtualizedContainerService.HintSize="416,936.8" sap2010:WorkflowViewState.IdRef="Sequence_273">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -548,13 +548,13 @@
                                 <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=Myworkframeset.asp&amp;mode=&amp;folderid=000000031X&amp;filingid=2783&amp;workflowid=1&amp;servicetypeid=1&amp;tab=1&amp;t=" CVScreenId="cb7de2f7-37f0-4801-a1b4-c2e4e88c111d" CvElementArea="11, 203, 19, 19" CvType="Icon" DesignTimeRectangle="11, 205, 19, 16" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='ctbar_imgBack' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='ctbar_imgBack' type='' tag='IMG' class='' aaname='Go Back' /&gt;" Guid="05e80688-d814-4ade-884d-b62206da0db6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAUCAYAAABmvqYOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEJSURBVEhL7ZI9CoMwGIZ7DWcHB39A3Bx0ES8gCLo56DU8j6N4F8FjiAf4yhtMMG2+VArd+sAL8cubpzTkQT/kLzdySz5NE1VVRZ7niWCN2Ses8n3fqSgKcl2XwjCkOI5FsMYMe+hwWOVlWVIURZQkiTHYQ4eDleNvv4rHcdS+EXS4K2LlbdsqQZ7ntCyLmF/FMuiaYOVpmoqDTdPQtm3nVEfK0TXByrMsEwfruqZ1Xc+pjpSja4KV930vDuJOgyBQ9+o4joqUo2uClc/zrA7j+eHpdV2nZtega4KVA9z3VeL7vvaNoMNhlR/H8fYD12APHQ6rXIJnOAyDeJII1vJp2rgl/5a/3ADRE8mPP/H1pUCWAAAAAElFTkSuQmCC" InformativeScreenshot="f8fddaf5b75d8ceb6d9c9ade90acaa81.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <Throw Exception="[new BusinessRuleException(&quot;Period End entered incorrectly&quot;)]" sap:VirtualizedContainerService.HintSize="353.6,115.2" sap2010:WorkflowViewState.IdRef="Throw_9" />
+                            <Throw Exception="[new BusinessRuleException(&quot;Period End entered incorrectly&quot;)]" sap:VirtualizedContainerService.HintSize="353.6,71.2" sap2010:WorkflowViewState.IdRef="Throw_9" />
                           </Sequence>
                         </ActivityAction>
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <If Condition="[in_TransactionItem.SpecificContent(&quot;Year&quot;).ToString = strYear]" sap:VirtualizedContainerService.HintSize="548.8,707.2" sap2010:WorkflowViewState.IdRef="If_18">
+                  <If Condition="[in_TransactionItem.SpecificContent(&quot;Year&quot;).ToString = strYear]" sap:VirtualizedContainerService.HintSize="452.8,707.2" sap2010:WorkflowViewState.IdRef="If_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -590,8 +590,8 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:LogMessage DisplayName="Log Message 'Period End'" sap:VirtualizedContainerService.HintSize="548.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_80" Level="Info" Message="[&quot;Period End is : &quot; +strPeriodEnd]" />
-                  <uix:NSelectItem DisplayName="Select Item 'Workflow'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_16" Item="[strworkflow]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message 'Period End'" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_80" Level="Info" Message="[&quot;Period End is : &quot; +strPeriodEnd]" />
+                  <uix:NSelectItem DisplayName="Select Item 'Workflow'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_16" Item="[strworkflow]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="4">
                         <x:String>SUREPREP TAX RETURN</x:String>
@@ -616,7 +616,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NSelectItem>
-                  <uix:NGetText DisplayName="Get Text 'Workflow'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextWorkflow]" Version="V4">
+                  <uix:NGetText DisplayName="Get Text 'Workflow'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextWorkflow]" Version="V4">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="90c77b83-f37b-4009-8a23-20ecfbda4fa4" DesignTimeRectangle="87, 384, 250, 19" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;" Guid="72b11139-c887-47c3-910f-a3697f200d10" ImageBase64="" InformativeScreenshot="ed9786e2652badd7044b58560bc74a6c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -627,7 +627,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <If Condition="[strworkflow = GetTextWorkflow]" sap:VirtualizedContainerService.HintSize="548.8,1034.4" sap2010:WorkflowViewState.IdRef="If_19">
+                  <If Condition="[strworkflow = GetTextWorkflow]" sap:VirtualizedContainerService.HintSize="452.8,1034.4" sap2010:WorkflowViewState.IdRef="If_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -673,8 +673,8 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:LogMessage DisplayName="Log Message 'Workflow'" sap:VirtualizedContainerService.HintSize="548.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;Workflow : &quot; + strworkflow]" />
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[out_strDescription]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message 'Workflow'" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;Workflow : &quot; + strworkflow]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[out_strDescription]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/newaddtaxflowfolder.asp?serviceid=1" CvType="InputBox" DesignTimeRectangle="376, 384, 156, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='filing_name' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='filing_name' type='' tag='INPUT' class='regdropdownBox' aaname='' /&gt;" Guid="bd23a307-5427-4367-a476-db2887057a80" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAaCAYAAAAwnlc+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACTSURBVHhe7dqhDcMwAETRruJ5vI/H6hgdIag02BNUrmIpIFID6yMPPHD8w3v03se2PSFiBggpM8AxdoiYAZZSYJlaqwDJOOJrrf0O8PX+wF8d8QmQGAESJUCiBEiUAIkSIFECJEqARAmQKAESJUCiBEiUAIkSIFECJEqARN0GeD5VYYVLgOJjtUuA54DVZoCQ0ccX5o6Evjk4KUYAAAAASUVORK5CYII=" InformativeScreenshot="bbacc42ee5ee9ca74d2436acbadf4c84.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector, Image, CV" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -685,12 +685,12 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NGetText DisplayName="Get Text 'INPUT Description'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextDescription]" Version="V4">
+                  <uix:NGetText DisplayName="Get Text 'INPUT Description'" sap:VirtualizedContainerService.HintSize="452.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" TextString="[GetTextDescription]" Version="V4">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="35cd96c3-1c57-4db6-bf29-961ca50a3894" DesignTimeRectangle="303, 308, 125, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='filing_name' tableRow='2' tag='INPUT' /&gt;" Guid="9ffb614a-5298-427a-a500-66437f7e2daf" ImageBase64="" InformativeScreenshot="272b36d52b5f4489c0c4302d7065fb53.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <If Condition="[out_strDescription = GetTextDescription]" DisplayName="If 'Description'" sap:VirtualizedContainerService.HintSize="548.8,1034.4" sap2010:WorkflowViewState.IdRef="If_20">
+                  <If Condition="[out_strDescription = GetTextDescription]" DisplayName="If 'Description'" sap:VirtualizedContainerService.HintSize="452.8,1034.4" sap2010:WorkflowViewState.IdRef="If_20">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -736,9 +736,9 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:LogMessage DisplayName="Log Message 'Description'" sap:VirtualizedContainerService.HintSize="548.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_86" Level="Info" Message="[&quot;User description : &quot; +out_strDescription]" />
-                  <ui:LogMessage DisplayName="Log Message 'TC_07'" sap:VirtualizedContainerService.HintSize="548.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_87" Message="[&quot;TC_07 - &quot; + &quot;Verify if the user is able to view and enter details on the following fields. 1) Client Name, 2) Client Number, 3) Engagements, 4) Year, 5) Period End, 6) Workflow, 7) Description. 8) PIC (Optional)&quot; + &quot; - Pass&quot;]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="548.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
+                  <ui:LogMessage DisplayName="Log Message 'Description'" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_86" Level="Info" Message="[&quot;User description : &quot; +out_strDescription]" />
+                  <ui:LogMessage DisplayName="Log Message 'TC_07'" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_87" Message="[&quot;TC_07 - &quot; + &quot;Verify if the user is able to view and enter details on the following fields. 1) Client Name, 2) Client Number, 3) Engagements, 4) Year, 5) Period End, 6) Workflow, 7) Description. 8) PIC (Optional)&quot; + &quot; - Pass&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestSummary_Filtering - Invoke Workflow File (Reporting\TestSummary_Filtering.xaml)" sap:VirtualizedContainerService.HintSize="452.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Reporting\TestSummary_Filtering.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Object" x:Key="in_str_Status">["Pass"]</InArgument>
                       <InArgument x:TypeArguments="x:Object" x:Key="in_str_Comments" />
@@ -750,7 +750,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="614.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -790,7 +790,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1241.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_283">
                   <sap:WorkflowViewStateService.ViewState>
@@ -855,12 +855,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="1014.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_132" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Timeout="2" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="1241.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_132" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Timeout="2" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newaddtaxflowfolder.asp?serviceid=37" DesignTimeRectangle="839, 347, 61, 16" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='imgAddFrmOk' tableRow='3' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='imgAddFrmOk' type='' tag='IMG' class='' aaname='' /&gt;" Guid="5191d2b9-048b-412e-8de0-eb968174ff4d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAUCAYAAADStFABAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH0SURBVFhH7ZRNLwNRFIb9Dz/AD/AL7Nhb2thIE7EQ9hKNlaAb8RmREBHSUBOSNhpCkFR9pDYqPpo0aLrQpouaEn31Pc0dU+pzDGK6eHPm3rl3zj3PvPdUAZdwuioQCjIgVNW2oLZlxFF6FcLNTcgRqkAo6AMQwv9YPwohhOztGTKZQ+TzcXlWByi//if1LoRymz6nWHwb0egirq8CeNCDwN2WgMjdJwXK8/WhyCo6+4fkDIzR802ZZ3SPThhjz/QUZla8JXu/JpudwCLPzoM42J+EnuwFLhqASDVwUgddPzI5org+crwuuce9s/LMQutbe0reqfnmrgFjn1XZ6ISQQNjbm0cy4QOyw0CiTQAgXEhViHSEGcJi0Ce51VgVvrHrN57pBoJRjrAum53Avx0IjCIW0+QaINUHxJuB4xpxRTZX6oSPQCAARo7VOquy1Qn63Sk0bRAdnU3SF5BfAtLdyJy2IhGfkzXmPSyWuf1byzLmteCYfUVBYGSvUNfEumx1QvE6sAC3uw0uVyM8nnYseHuwtjYmvaL4/dIcbHbMT7FQguG8GQK/yXeEYd77VdnqhFQqjHR63+gNmjaMnZ0ZAaDmrYH+DtnsBEJQYsHsEYxPxb90wm/IVieYQfDPK/0lADzDmxCcpLIQnKYXEJysCgRc4hFAeBcMmFLAXAAAAABJRU5ErkJggg==" InformativeScreenshot="e80dfa5d959f0e42a1b8ba1dc71df385.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Your folder'" sap:VirtualizedContainerService.HintSize="1014.4,1173.6" sap2010:WorkflowViewState.IdRef="NCheckState_35" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Your folder'" sap:VirtualizedContainerService.HintSize="1241.6,1173.6" sap2010:WorkflowViewState.IdRef="NCheckState_35" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,800.8" sap2010:WorkflowViewState.IdRef="Sequence_284">
                   <sap:WorkflowViewStateService.ViewState>
@@ -948,8 +948,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <Delay DisplayName="Delay 'To wait for GFR page refresh'" Duration="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;)))]" sap:VirtualizedContainerService.HintSize="1014.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DOCUMENTS'" sap:VirtualizedContainerService.HintSize="1014.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_135" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+            <Delay DisplayName="Delay 'To wait for GFR page refresh'" Duration="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;)))]" sap:VirtualizedContainerService.HintSize="1241.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DOCUMENTS'" sap:VirtualizedContainerService.HintSize="1241.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_135" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=MyworkFrameset.asp&amp;mode=&amp;folderid=00000002QX&amp;filingid=2511&amp;workflowid=1&amp;servicetypeid=1&amp;tab=1&amp;t=" CvElementArea="213, 443, 150, 40" CvTextArea="246, 457, 91, 12" CvTextArgument="DOCUMENTS" CvType="Button" DesignTimeRectangle="214, 454, 146, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='foldertabs' tableCol='3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='foldertabs' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='DOCUMENTS' check:innerText='DOCUMENTS' /&gt;" Guid="2a4b60a6-eb38-4d46-a861-f32207e66568" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJYAAAAsCAYAAACHUEHxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAABJsSURBVHhe7Zx7UFtnesb1X6c7nXam3e1lm9lut7uzm91pyGUyne10OttJu9uZNmG7m9RxnDTO4jgXJ7YTx0lsx+Bgr+/X+JIYx9j4AtjmfjM2BhswCncQQgYJEEgggQAJBBK6Hj19z006OhxhYeNdz0Z//Oac7/ne9/2+c87Dd76DGatCQQvmwVgRClnBEAHGgiCoDQsQF3wuB0bpOEo1RuENWuGjugzGiFGOIMUHQyzsOPxY3Hjc+HxuuBZHPJrYTmi/W418I0EV8JjA4TUh6DMj6B8GExghc1nAcA95hAzGB0vNE22maPji/AQYMqqPavqDIwgQ/gCdB0ykDcHrM8LD4h3EnMfIwZ57PIPwSiEtqp3QHhLNSOciA1Go3NMGsHhm+uFzGeH3DCHAGozMxZCpQqEIEfOMEnc3F0NGCvrNnFF8XjISax53H9wuPWZneuCc1mF6qhtTDh3BH6enhHM7j0NAbN+zNqmgCdyTlqhHaIkuDodwFFFNWDsxOarB1Hg3Zh29mHP2wTfHm4sJDvOGYlcr2YoVEl6PIZDpCF5nj7wJg0EzfL5BqjMEj7sfjkktJm2dcIxrYB/rxLi1DWMjzRg1N8FqaoJlqJE7cpA2amb7lo4xBe1+SNTjYZ/V2HALRofZZxZ5biqjvh6mvgZYBpswbumAc/IO3DNkLvbVSK8tds8FeqVFG4s1FE+QjMREGYtepYwJbrceTqeODDbEudlu64DN3IrhvkaMGL6Cqec2BnV1MGprMdBVi37NLfR33aTzWwK8PqClc5b70IykGanNEzsuUU9ZW6iesZtHnqvqai6Hrv0aDN01MPereXM5emiVMXKr1kLGYgjRWAwZil2p/LR3YvdQc7RSTc3oYbW1wzzcgMGBW9Brr6GrqQzaxnJ0qovR3lCEtvpCtNXxtNblo7WeYI+3Cnhq8wTuQ7uVjzZRu7VAXKKesharXi0bw8e10LG5thhNtWVorK2ASl2di6a6PHTSA9eTuUZo5XKMa2nV6oefVq27rViiqQK0SnloEzc3R/spvxWO2SE0dlZh2+512L77DaTvWIm01JfxyccvYetHK7D5o+U8HxIbl2PTxhcjfCCyTMZ9aBsS9R5kvY8+WIENH6Rg/QdrsHbjeqhqSjJRW3menJYHbdtVDBlug913uWhDzxmLPv2VjCXup1hTBVlT+QfgdNGHgNsEl3sEnbp6HPh8G5KX/zN+vTwJL7z4KJYt+xFeXPYo8ZMILwpItQQPP//7Eywn2CPL88uexHPLfoZ/ffYZPJL0j1Bdvfw5bhSfxu3r2ehsLMVATy1sI+1wTfXCT5t45RWLNxW7nwqFaJPuN2LGbcAsff3NeizoH2zBgcMb8MqrT6Nbcwo9miPQa/bBoNlDsEeWvRKWUhPbCW3pNbG9F30snSy8rtOcQGvXZWRcPo5vP/FDqIrOHkZ5zgncLD1L+5wC9GlruC+AGbuOvg6N3O+0wK1acmMNE+wGf5D2VezvoQYxOWXAsL0PGza9jK2bnoG2di0mOtdgsnM17J0pcHCsEhDaHSmY6ljFEdaU4uLWxHZCW3pNbBPccxP7UmDVvAdD1wFcvJyK7z/xTagKMg+i/OJx3Cw+w23S+jTVGDORsRyxjBVZqRjGjEDQTHsrE6ac/TAONZGpVuDwoVdwu+JNOGlQf+eviF/GIJk7Bjp42HMfab6omIT28Gjs83pOIBkBSdyM5lUMd6Ui//IGPPr4N8hYpw/wxiqKNtYsZ6wBMhatTKypOGOJpqKVivZVPupz+4a5jXoHfXLu3vM2dm9/Fs1V78ChXQdf10tA13N3RyNA5yEBaX9Ce1i0Z4n/FmDPI3Fz2lcw1r0VRXnv4yeP/xFU+V/uR9mFY6gpyuQ+JTlj0aswYiwzmYoMxf3mnV+pgswQfMEhzHjNmJgZQqf+K5w6txcpK59Gr/pjzOjWwte9Ekz3i4D2+XmEuiOAReyT6rK4pdC4sWSaNGax2tetXqj71zIi/R5dCmx30lGc/yF+/PgfQ5VHxio9fxQ1hZloucka6watWE3Cq1BqLNFU/L/zzfnNsJGp9OYOHDy2Ba+99lMM93yBmZ6NCNx5DaE7tFrNYwWgewUh3cvES4oxrCbq4vlSaSJSTRqzWE1EqkljFquJSDVpzGI1EakmjblXjRGQ9nvuvA1b724UF2wmY/2JgrE6lYzFvg5NtKeilYpM5aKvRcfsIMx2I97f/BrStv4K+qYdmO3ZCl/PWhp0NQ2WQpNRhu0TidUnj1sKTUSqSWMWq4lINWnMYjURqSaNWawmItWkMfeiMT3KzPW+D5v+EEoK08hYf7aAseir0Ovup68+M61UIwjSauVnhjFHeyq70wi9sZkz1WfH1qCxOhWz+nQEe9eD6X0Hod63EdK/9fDQ+xYggW0rxsXL17Qee2SoLSdIuA0fw2Y4hpKiHWSsP59vLAMZa5S+7mbs3WSsPgT9JjKWBd6ABTMeMpVrGB09aqTvWovdu1agtW47nH374DdsRsiwLsHXDIYIEu6+rbD1n0RJ8S78KOmbvLG4zbvMWE67Fh63AQEyFvuHd7MeK2zTJnTom/Hlxc+wMuXfoG87hNkBMlV/Gpi+TQj1bZxPv+yY4A8Ohp7t3EA6xo2nUVKyDz9gjVVwhox1kV2xzpCxCshYNZyx2L+pmXMZ4PeZaLUaxeSsBfphHfYdS8f//ebfYRksxKzxMwQGPkVo4BMJWwQUtH6BheKMcWpKuUpaot7vpJ7HuBsTg+dQUnoI30/6K6hKL9CG6/whXL9yCs3VhejruIXx4VY4JjWYndXD7TVh0jUEk92MdZveRGraqzB0ZMA1eBK+wQMIGn9LA22XkZ7QvmaaZ+ggJkw5KCk/Ssb6W/b3WLtRlHUAVVcy0FJdwP1dlJX926yxTjimemij3od+czvWk6mOnNiMxrpjcJlOIzh0iNgPZmjvXQkNRlhI49mB7JTVUD2lQGqqYq7lzJp5sclndkhqiqRipyxO9dQaZLfztdSpgpayie6BMAblNUh0C7WjxhPmJCLt4+ewwPU89R4auDzpvGg+HZF64bFpnND194SYWIj1YowpzD98/4QxWJS0+NkDj+kYJsz5KK34nIz1HXoVZuxBSdYh1BRkoL02D0ZtNaxDzbCOtMNm64GONur7D2zCvr1r0N6YgZmRHPiHv0DIfPguHIkCsnYsLWTei+xVwo1Io58GQbeefUe4QRugpjafGx0r1gvHrvoEVkELVW0Q8ldjZ5WgifkUN0ptdZpQS8gT68n1yFxY+Pnw9bZHGTf5LD2oGNcTTXSedN7hsWW58vsR7tN8gmShDj9+dLx47fE/j4Vgn/MhDu/wKUyOlKL06in8Q9J3oSo+dQDlWUdwq+gUOupzYdBUYNjYCNNgGzSaOuTknMQ7b/4PhrpzMGfJhd+SCcZCxho5jpCFYI/zOHEfHIw8iG27ovrU26J1a9a7fPupjVBL4qQ1krMOUntX+MHxbVnstjT6QZLUX8W3xRi5HhmXJ1yzeqOCHvt6IkTmt3MbX2NnNd8nv2aRmNcenoP8nvB9Yt2lg3/mPksW7NZKlF47g+8lfQ+qoi/2o+LcZ6glY7XcvIg2dT60bTeg67qNI4fSsfo3v4TNVAuPpQBBaxZC1i8fMEeR/bpwMz/dF91X86Fw0z6EmtrqT2PESfteT4dVly78FK9Fti46TkpUzgK69dxavk3z2Mn2CTobl3wuPWLic0cpf4HrCbMvYqwaIV5SUylXOgf2XoT7wteqnPeg8FpzYB+rRtn1C/j7pB9AdTXrBIozD6Mi5wQarudC21oFg7YZH6xbhfTUt6HXlmB2vAq+sQIwozlU5OICXFDQFsspyYOg5VbaV7NJuGHryCALxBHWc+v4vtd3wRqVFx0nJWIgyllAD9d+ahPUul30IKlujXDUHZEY6xTlS+YpJzxOJGdnDbW5mnx+xFjR1xg1B4ke3SdDdl1LiXesEHbbbZRVXcJ3k34I1aXje2mPdQLXC7JQey0Ptdfz8e7ql3H80DY01efAMVqFuYlyBGyFYMbyOEI2Gaw2li8cJfo9kYXs1cKNSKelVtpXu0W4SVugprY6PUactG/1Plh79gk/xeuR3RMdJyUqZwHdemE93+bmIZkv138iYqwLtMIvdD1hIjk7aZ/LavyYW7AzxjVGzyGizyN87Tz8nBTi7hOfrQKOiWaUVeeTsX4M1YXje5BPxiq9fAbZZ49jy0dvIW3zG2huuETvzFrMjFYiMHUNzGQZmPEShFgmSuczXiag0LcosiMPYntGVJ96e7RuzX5fuGGpUEvipDWSs7OpnRF52FxbFrv9IKx0Hq63mm+LMeFxBV0+rthWHiv29USI5OysEzT9wShDyHNjXbs1OxXZ+kibJ5453B++iRuYsnegvKYYf8f+afLFkwdx8dQRnDq6B2lb1mPly/+FZnUuRk1VmBq9gTl6DQanqsHYryE0WTkfTme5LqAQsyiuIPsN8SZkhvXIjUyD+i6xYSO8QV9DYmx9mpBPD69eli/GhWOUx0jOvsJpynMRyZQYi41XnmOsnMjcpOPMz401B1EX58phOBI2qbT+UuKz12La0Y2Km+X4zmOPQXX+xAGcPPhbrFv9ClYufxa3b17BQG8ZTIYCOGiXH5xpwBwdGfsNhBxkMCXsNcRNniiNmBd3N60w8iBkJOcUSeIiuZacyK8SIrH06pbFMY6s8AOMsAHZ/ZE4pVocO7LC9SIxn6JhgTG4+dqLYl5PON9+LmKsBmm9iM6NHx5DNgdB44l1/+Rx4hhLo/kcakxN96L8ViUeeexxqI5t34bXX0jG+ynLkX/2CAY01zCoLcbUcBW8k7Xw2+sQIDcyjjoyVj2YKZbbCjQIsOdijNhOaH/omne6FVPOAZTX3iBjPQnVil/8HFveWoWswztxu/w87nxVQJvdStiHquGmXT7jbEVolnA2C7QQrWBmFqJFQKo1x6kp5SppiXoPUz3fjBbTrmFU1NfikaSnoXp3+Qs4vXc7qi5novl6LnTqQtgMNZgcvAWXjYzk0tHrsIvMpaHzTv442wXGFS8agU7hGEuLF6VcJS1elHKVtHhRylXS4kUpV0mLF6VcJW1x+Fx6TM/ZUNHQgG8//k9QZe7fjqLMY6jJP0vGuoTepnKMGerhMDfBPalF0NUHv7MXjJvlDkfI3UPHeOFzIsTS4kUpV95eDEq5Slq8KOUqafGilKukxYtSrpK2OHxzg5j2OFCubsLfJP0UqpKzR8lYR1CZcxJfXc2Ftr4Uo/omeCYM8E8b4XMOIuSzgvEMIegx0nEAIYI9sgQF5O3flya2E9qD0ZRgY7weC5y+GVR81Yq/TvoXqC4e3Yny88dxq/AcrVj50LfcxHh/F6YtBrgmh2iJsyIUnETQN4qg18oR8rBG489F2PbDoDEJ7YFqSrAxXt8knH4PKho7yFg/g6rw9CGUZh1D1SXaY10rwnB3G8b6dXBYBuCepkS/AyFmGkG/nWANZgfDwp07wjACXJuNlccJ+Wx7fq4sTik3znr8PKLjuHY8mlArrHG1EvWkueF+icbGef0uOIMBVDR14i+TnoEqL+MgSs6eQPWV82i7UYmhrnYM9+owPWaGd3YCAd8UgoFpMIFZMEEi4BIQz90KKMUJ+VwNURPjZXHcMQ4tUU9AFscd49CWoh5XwwVv0I8ZhsHV5k58K+k/oMo9vh9lWRmoLbyCzps16O8gY+l74JwYhdftgM/rgN/vBMN4aOXyKeBXQClOxCs5jyf+biTqRfcvlvurx4R4fCEGswAqW1hj/Ryq4swvUJmdRXusPLTV1MCq74VtiHb4rLHmphAKuUGbKsJPBGPAECGZFouAgnY/LGU9tlai3r3gp+fvImNda9bgW4/9AqrSrNO4nnsRt0uLoamrw2B3F8bNg5h12ODz0CuQYY3lJXyE0iRYw8l1uca2RW2hC5HGxasl6kW4W66StjT1ArS4sMaqZF+Fj9GKVZpzCZUFRairrEK7uhmGO70YtVgx7ZzGnM9DSxzrRkZCiDQpjMBCmtiWx8lRiotXU0IpLl5NCaW4eDUllOLi1ZRQiotXU0IpTlmbo+M0GauiRYO/SPpPqIqKa1B+tR7VN1vR2NIDrX4ExlEnxmZ8sPsZLnia3nIsTuE4JYX62WOUntC+FpqUSdLGiMKWLvzpE89BtedEHg5kFOGzs2XIyK3CueLbyL3ejoJ6DUqaNChr1aCUXMjThRKimM7lsP0lD4HGnie0B6mxz19EjOniDJXXosWnF8vwjSefhyryv/QlSLBUWPD/2tIQOn8AUUkAAAAASUVORK5CYII=" InformativeScreenshot="3ca99f1e5a89def1740ef2dba91da0fe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* | GoFileRoom' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -960,12 +960,12 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Options'" sap:VirtualizedContainerService.HintSize="1014.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_136" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Options'" sap:VirtualizedContainerService.HintSize="1241.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_136" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=Myworkframeset.asp&amp;mode=&amp;folderid=0000000LLW&amp;filingid=1264488&amp;workflowid=10026&amp;servicetypeid=37&amp;tab=1&amp;t=" DesignTimeRectangle="53, 532, 109, 30" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='docSearchCriteria' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='btnDocsOptions' tableRow='2' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='docSearchCriteria' tag='TABLE' /&gt;&lt;webctrl id='btnDocsOptions' type='' tag='IMG' class='hotspot dynarch-menu-ctxbutton-left context-align-bottom' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="fa5e41bd-4207-4519-bec5-74bc5f5f28cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAcCAYAAAAOa8NNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL3SURBVGhD7ZpNa1NBFIb7F/wL/oX+AsG1CuJCKS4rVQSpi2hdWLFBEbW1ViWKWvyEQsGdLaUKutGaUm1txYXgQkHwA1y4U495pp5muJlkbnqnaW6YF17InTkz985zJnPbmXSNPVyW6NY4wm6h12BffvC24iUZvbcoI3cW5OL4fMVluXD7VWoTn9au9nn36tjmDT84whOuDthLJuj8rTk5U3ouQ1eeyOClaTk5/NjrwZGpqittvLbiXf3l1YwNbvCDIzzhWgObTLx5/10W3n2LzuC5xS8ycO6RFK8+NcDhWgObLBC8Hv3+8ze1O10w7CtcM8CZ4XCtgc1as17YUVXBsOfAkPSfui+nx2YNVwfscoQdQDDcvb8gh0/cNGs4XGtg8zaNsLMLhjv39suh49fNSxOuLYP94+cv2VMoSVd3r/GWbUfk7PjU/1q/tvcNm/YqrnG7SmEfPFZqPezunqJs3TEg5ZWP5ro0+cxAL4xOmmufaI/zosywdVY2sksKNjmTmZnMcGb9zMsVE9NbvLvWl8bbZSQMJWc6sRpDUjSprn55HkQM/VHGc2h5CAWZ2frALtcTs5d6BaBSQACZmCmbzwpQ21CHkjPbvta2CotEaFL0HsBGtAEsspci4rQ8hILARjx80o3UDGyF++HTV3NNDGoEG5A2KP0m0Zfeg/4Rz6KxWgdwyrlnKAWDjXhItU++ZQRtBmzEfSijL8pZ0kIoKGzEINKKwdgvSIXAQJHC3qhlxAWbGL2fnaAQCg67Gfn+9LNha4xdr9AwsQBVUMiuJwnJF6QuEcRpIuiHz9pOEx9CmwrbJ4WdXNfzqraGnZyBeVdbw+40KeyG/65n2YhybaXWc6cLht6NKLYC4+FBdr94/dm/xcomN5vdbHqz+U0DMsRXIo137bN9tIGrca5+8mx4wc17eMDxDcc4HOcQSGb4KrD2sNjXM/VV32jC1XaufvNmxgEvuHmPxeKBb3YztlQHvvGnDNm9OrYUP2WI3nhH2C3zsvwDyFwNgcJX78MAAAAASUVORK5CYII=" InformativeScreenshot="170773b55a490023e298e369c3676c76.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Work | GoFileRoom' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1014.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_137" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1241.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_137" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/trpc/newtaxflowfolder.asp?LastPage=Myworkframeset.asp&amp;mode=&amp;folderid=0000000LLW&amp;filingid=1264488&amp;workflowid=10026&amp;servicetypeid=37&amp;tab=1&amp;t=" DesignTimeRectangle="55, 615, 187, 25" DesignTimeScaleFactor="1.25" ElementType="TableRow" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' parentid='document' tag='TABLE' /&gt;&lt;webctrl idx='3' tag='TR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl name='mainframes' tag='FRAME' /&gt;&lt;webctrl parentid='document' tag='TABLE' /&gt;&lt;webctrl type='' tag='TR' class='item explicit-action       ' aaname='' check:innerText='Add' /&gt;" Guid="e1adac35-87c0-4f10-8c1e-8e8fc98de02c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAYCAYAAAACh+TEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEOSURBVGhD7dfNDYMwDEBhdmKhnJgha3iXrMEaWcONk/AjlR4aVB/K+yTUhnJ8suk0zYsCv2SNERp+jtDggtDggtDggtDg4l5oOWkMQWXt5ws5RQ1XD6yiISbN/Yj/dis0iyiKlOtzaYQGcyO0rClGTXn77LeNRVQmXQhRRU6h9Qlov0kJlNCeYzw0i6YHVCfbXtqqsq9Ti7CEVQ/t+/bcKuU+oT3GcGgW174RLbotmjrNpOTW7KuzTrPT5GN1PspgaG1qtfW4XT0iQsOFsdAuIjle+lmdeDcUmkVyvJN1dWL1SVanWpty/BmAGZtowJcIDS4IDS4IDS4IDS4IDS4IDS4IDS4IDS4IDS6medEXmWuoG61U2ZAAAAAASUVORK5CYII=" InformativeScreenshot="a976b9122302bbe6e3a10da45a01fda9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* | GoFileRoom' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -976,7 +976,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1014.4,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_28">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1241.6,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_28">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_123">
@@ -1000,7 +1000,7 @@
                       <OutArgument x:TypeArguments="x:String">[in_FileSection]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("FileSection").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Engagement").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_126">
@@ -1036,7 +1036,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <Assign sap:VirtualizedContainerService.HintSize="1014.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign sap:VirtualizedContainerService.HintSize="1241.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:IEnumerable(x:Object)">[ZippedList]</OutArgument>
               </Assign.To>
@@ -1044,7 +1044,7 @@
                 <InArgument x:TypeArguments="scg:IEnumerable(x:Object)">[arrstrSplitPath.Zip(arrstrSplitDescForDoc, Function(doc, comm) New Dictionary(Of String, String) From {{"Document", doc.Trim()}, {"Comment", comm.Trim()}})]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[arrstrSplitDescForDoc.Length = arrstrSplitPath.Length]" sap:VirtualizedContainerService.HintSize="1014.4,2207.2" sap2010:WorkflowViewState.IdRef="If_21">
+            <If Condition="[arrstrSplitDescForDoc.Length = arrstrSplitPath.Length]" sap:VirtualizedContainerService.HintSize="1241.6,3953.6" sap2010:WorkflowViewState.IdRef="If_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1052,20 +1052,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,2012" sap2010:WorkflowViewState.IdRef="Sequence_261">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1208,3758.4" sap2010:WorkflowViewState.IdRef="Sequence_261">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="scg:Dictionary(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="529.6,1923.2" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[ZippedList]">
+                  <ui:ForEach x:TypeArguments="scg:Dictionary(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="1145.6,3669.6" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[ZippedList]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:String)">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="currentItem" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1785.6" sap2010:WorkflowViewState.IdRef="Sequence_262">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112,3532" sap2010:WorkflowViewState.IdRef="Sequence_262">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Doc" />
                             <Variable x:TypeArguments="x:String" Name="Comm" />
@@ -1075,7 +1075,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                          <Assign sap:VirtualizedContainerService.HintSize="1049.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Doc]</OutArgument>
                             </Assign.To>
@@ -1083,7 +1083,7 @@
                               <InArgument x:TypeArguments="x:String">[currentItem("Document")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                          <Assign sap:VirtualizedContainerService.HintSize="1049.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Comm]</OutArgument>
                             </Assign.To>
@@ -1091,7 +1091,7 @@
                               <InArgument x:TypeArguments="x:String">[currentItem("Comment")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NSelectItem DisplayName="Select Item 'File Section'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Item="[in_FileSection]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+                          <uix:NSelectItem DisplayName="Select Item 'File Section'" sap:VirtualizedContainerService.HintSize="1049.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Item="[in_FileSection]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
                             <uix:NSelectItem.Items>
                               <scg:List x:TypeArguments="x:String" Capacity="50">
                                 <x:String></x:String>
@@ -1162,8 +1162,8 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NSelectItem>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_92" Message="[&quot;File Section - &quot;+in_FileSection]" />
-                          <uix:NSelectItem DisplayName="Select Item 'Document Type'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Item="[in_DocumentType]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1049.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_92" Message="[&quot;File Section - &quot;+in_FileSection]" />
+                          <uix:NSelectItem DisplayName="Select Item 'Document Type'" sap:VirtualizedContainerService.HintSize="1049.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Item="[in_DocumentType]" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
                             <uix:NSelectItem.Items>
                               <scg:List x:TypeArguments="x:String" Capacity="14">
                                 <x:String></x:String>
@@ -1198,7 +1198,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NSelectItem>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[Comm]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1049.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[Comm]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/EdexIndexes.asp?drawer=000000000T" DesignTimeRectangle="228, 386, 210, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexIndexes' tag='FRAME' /&gt;&lt;webctrl tableRow='11' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexIndexes' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='search' tag='INPUT' class='' aaname='' /&gt;" Guid="dbf2e226-51f2-471c-8b46-755727446518" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAAZCAYAAABNXdBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVHhe7dMxCsMwAATBvFrf1hNsXCTIkEpouxm46ur9zDkvMzs7YZkFe4U1xjCzza0t/cJ6DmDfGpew4BBhQUBYEBAWBIQFAWFBQFgQEBYEhAUBYUFAWBAQFgSEBQFhQUBYEBAWBIQFAWFB4G9Y37jMbG9rS6+wzOzMhGV2fPO6AcrlvyjnOcIDAAAAAElFTkSuQmCC" InformativeScreenshot="50ae5b0f4dc4dd708d2af43d0f45dc79.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Add Documents | GoFileRoom' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1215,8 +1215,8 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NTypeInto>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_93" Message="[&quot;Description : &quot;+Comm]" />
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Document Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[Today.ToString(&quot;MM/dd/yyyy&quot;)]" Version="V3">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1049.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_93" Message="[&quot;Description : &quot;+Comm]" />
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Document Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1049.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Text="[Today.ToString(&quot;MM/dd/yyyy&quot;)]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/EdexIndexes.asp?drawer=000000000T" DesignTimeRectangle="228, 501, 210, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexIndexes' tag='FRAME' /&gt;&lt;webctrl tableRow='17' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexIndexes' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='SEARCH' tag='INPUT' class='' aaname='' /&gt;" Guid="8c0d099e-a3c9-4eb2-b978-34596ebb3479" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAAZCAYAAABNXdBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVHhe7dMxCsMwAATBvFrf1hNsXCTIkEpouxm46ur9zDkvMzs7YZkFe4U1xjCzza0t/cJ6DmDfGpew4BBhQUBYEBAWBIQFAWFBQFgQEBYEhAUBYUFAWBAQFgSEBQFhQUBYEBAWBIQFAWFB4G9Y37jMbG9rS6+wzOzMhGV2fPO6AcrlvyjnOcIDAAAAAElFTkSuQmCC" InformativeScreenshot="69b1da11d96dce13ff8c38ba31b9cb8b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Add Documents | GoFileRoom' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1227,7 +1227,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Browse'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_138" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Browse'" sap:VirtualizedContainerService.HintSize="1049.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_138" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a5bdda8-c006-422b-a22a-dd93f20f9197" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/EdexControls.asp?upload=0#" DesignTimeRectangle="551, 297, 102, 37" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexControls' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='A2' tableRow='5' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cabinetpage' tag='IFRAME' /&gt;&lt;webctrl id='EdexControls' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='A2' type='' tag='A' class='btn btn-AddDocs' /&gt;" Guid="4ed2b180-8acf-47d6-8808-56c6386c5fe0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAApCAYAAADd7bxVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVHhe7ZZBjsIwDEXnGHNZjjF34B6IMyCxZt1WYlNVUE+cJo0Typb6i2/piSZx0yovTvnp+16IfygKhFXU/e+XOISiQKAoECgKBIoCgaJAoCgQKAoEigKBokCgKBCciTrKU9oY5HHayv0uXIp6XkrfeBtExrOMVd734V7U/XSWWa4yrdeDzKNWmu3LkfriPKUSa9kHeYT74zMu13SfRr635OSo3mcn3IuKi9wdl3aSUsaX/Pl2iO2pC40kRK9z3tSpXCtRr19lVvPkZ0aZ+x+/LkXVYXZ6qqh10Wy1NeNFcKiO7ixTaK9VFPtrUYXlHcpmMBVY5X0Wl6KqRbFyWjFxt5u2XXzN1erSXxUTcrVibOUs86VYj8atzVKqdi/8i7I7uhW12c5VoveFsSQojoXKeoxbVWQr0MhucvbEvyi7+K2YlF99W8w/xOXblOfTI1DbabyZ6+03Kua1m+fzuBTVxrpIL6JyX45mrDkaVYA9wmIV5TCCcxXn2PvYU5yJIu+gKBAoCgSKAoGiQKAoECgKBIoCgaJAoCgQKAoEigKBokCgKBAoCgSKAoGiQHgRRXxDURD08g+oJO7S3NLlbAAAAABJRU5ErkJggg==" InformativeScreenshot="bc4097968c825b0bfa2043880ab34ada.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Add Documents | GoFileRoom' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
                             </uix:NClick.Target>
@@ -1238,13 +1238,13 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Upload a Document" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="6c7e8b74-be22-4d2c-9330-635e85ae8706" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Upload a Document" sap:VirtualizedContainerService.HintSize="1049.6,1794.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="6c7e8b74-be22-4d2c-9330-635e85ae8706" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1528" sap2010:WorkflowViewState.IdRef="Sequence_290">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1554.4" sap2010:WorkflowViewState.IdRef="Sequence_290">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1382,11 +1382,11 @@
                               </ActivityAction>
                             </uix:NApplicationCard.Body>
                             <uix:NApplicationCard.TargetApp>
-                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="323d571370b6672a9a970ecd06774335.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='Search' title='Upload a Document' /&gt;" Title="Upload a Document" Url="https://qed.gofileroom.com/UploadFrameset.asp?drawer=000000000T&amp;attempt=1" />
+                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="323d571370b6672a9a970ecd06774335.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='Search' title='Upload a Document' /&gt;" Title="Upload a Document" />
                             </uix:NApplicationCard.TargetApp>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -1445,7 +1445,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1241.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,1428" sap2010:WorkflowViewState.IdRef="Sequence_298">
                   <sap:WorkflowViewStateService.ViewState>
