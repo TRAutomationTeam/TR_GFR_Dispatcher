@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1102.4,5481.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,5474</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -143,7 +143,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="809.6,5416.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="810,5409" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="PasswordTr" />
       <Variable x:TypeArguments="x:String" Name="UsernameTr" />
@@ -154,8 +154,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="747.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <Sequence DisplayName="Sequence for Login" sap:VirtualizedContainerService.HintSize="747.2,5122.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="748,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <Sequence DisplayName="Sequence for Login" sap:VirtualizedContainerService.HintSize="748,5117" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strUsernameLive" />
         <Variable x:TypeArguments="x:String" Name="strUsernameQAT" />
@@ -167,27 +167,27 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="GFR_Username_Live" CacheStrategy="None" DisplayName="Get Asset 'GFR Username'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="684.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="GFR_Username_Live" CacheStrategy="None" DisplayName="Get Asset 'GFR Username'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">[strUsernameLive]</OutArgument>
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="GFR_Credential_QAT" CacheStrategy="None" DisplayName="Get Credential 'GFR Live Credential'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="684.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPasswordQAT]" Username="[strUsernameQAT]" />
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="684.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[PasswordTr]" Username="[UsernameTr]" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GoFileRoom" sap:VirtualizedContainerService.HintSize="684.8,4484.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V2" WindowResize="Maximize">
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="GFR_Credential_QAT" CacheStrategy="None" DisplayName="Get Credential 'GFR Live Credential'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPasswordQAT]" Username="[strUsernameQAT]" />
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[PasswordTr]" Username="[UsernameTr]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GoFileRoom" sap:VirtualizedContainerService.HintSize="686,4481" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="651.2,4244.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="652,4241" sap2010:WorkflowViewState.IdRef="Sequence_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIfV2 Condition="[in_Config(&quot;Environment&quot;).ToString().Contains(&quot;Live&quot;)]" DisplayName="Else If 'Environment'" sap:VirtualizedContainerService.HintSize="588.8,3097.6" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+              <ui:IfElseIfV2 Condition="[in_Config(&quot;Environment&quot;).ToString().Contains(&quot;Live&quot;)]" DisplayName="Else If 'Environment'" sap:VirtualizedContainerService.HintSize="590,3094" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                 <ui:IfElseIfV2.Else>
                   <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_63">
                     <sap:WorkflowViewStateService.ViewState>
@@ -268,27 +268,27 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:IfElseIfV2.Then>
-                  <Sequence DisplayName="Then 'Live'" sap:VirtualizedContainerService.HintSize="555.2,1064" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                  <Sequence DisplayName="Then 'Live'" sap:VirtualizedContainerService.HintSize="556,1061" sap2010:WorkflowViewState.IdRef="Sequence_61">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameLive]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,250" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameLive]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/login/" DesignTimeRectangle="840, 525, 305, 35" DesignTimeScaleFactor="1.25" Guid="245711fb-b8e5-4d35-a5ca-8a63e071bed2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAcCAYAAABWOJIRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHMSURBVHhe7dc9bsJAEEDhXIWCPoqUQEEOAAUXAIkzWFzAojYH8Gkn3l+PLRtWVGH8ik/C3mXZ5nnNx2b7KwDe2892J59f30LQgAEEDRhC0IAhBA0YQtCAIQQNGJKDbpur7AeDF6nbu1QHfQ/Af0bQgCHlQZ9v0rZtdJNTnneUqkn3W6nPan5zl8bdd2v765vUea5+WAzX6PcS7tfVNazTaaqjnOo0t2AfwIIUBj2Me191oXZhuc8+rvoSvuOjj/P05zyWQovxxe8N1vC/NZqX9hbXCL8dxp7uw68JLMNLQQ/n6NMwnqju2kelTtDRtXso9BFrao1RtJuDO6n7NVzEYezBPuJcYAnKX7l9TN0p6OS5IaT0mpv4yFzAes3R9SBovXakg85hPglaf9/JDwJgIeaD9vFMv7b2MY6i14qDHp3CEyd0WdAz+wAWJAftTkj9iur/k6YARyHN/oeOJ61f59Wg3by8l9KgH+wjzgWWIAedIsivrDrGjg9wcixEl8YGYRYFHcfS2t29PtTyoGf3ASxIH/TEIID3QtCAIQQNGELQgCEEDRhC0IAhBA0YQtCAIQQNGELQgCEq6F13A8C780Gv12sB8P5Wq5X8AcJ4BZQhUw5RAAAAAElFTkSuQmCC" InformativeScreenshot="3e30dc02595bd22f3680e7a136b127ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoFileRoom' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Enter'" sap:VirtualizedContainerService.HintSize="492.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                    <uix:NCheckState DisplayName="Check App State 'Live pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,514.4" sap2010:WorkflowViewState.IdRef="NCheckState_22" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Enter'" sap:VirtualizedContainerService.HintSize="494,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                    <uix:NCheckState DisplayName="Check App State 'Live pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,512" sap2010:WorkflowViewState.IdRef="NCheckState_22" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_69">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK live pop up'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK live pop up'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="1036, 272, 90, 49" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" Guid="fc3994e1-6bce-4b08-9751-b1c089dec7b4" InformativeScreenshot="2946aefe0cf5add7e53a2a3052c532be.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='GoFileRoom - Google Chrome' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -302,7 +302,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.Target>
-                        <uix:TargetAnchorable BrowserURL="gofileroom.com/login" CVScreenId="4a602822-09f6-43db-893d-a346ab8c5875" CvTextArea="710, 144, 242, 22" CvTextArgument="www.gofileroom.com says" CvType="Text" DesignTimeRectangle="710, 144, 242, 22" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="dc2a324d-f899-4011-9fb3-be7f7cde2c77" InformativeScreenshot="c957c66a2543f2600e82ae731e09aa02.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='GoFileRoom - Google Chrome' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="gofileroom.com/login" CVScreenId="4a602822-09f6-43db-893d-a346ab8c5875" CvTextArea="710, 144, 242, 22" CvTextArgument="www.gofileroom.com says" CvType="Text" DesignTimeRectangle="762, 115, 193, 19" DesignTimeScaleFactor="1" ElementType="Text" Guid="dc2a324d-f899-4011-9fb3-be7f7cde2c77" ImageBase64="" InformativeScreenshot="c514851b9123747059a9343c41e6280b.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
                       </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
