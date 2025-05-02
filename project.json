@@ -5,13 +5,21 @@
   "main": "Main.xaml",
   "dependencies": {
     "ReporterExcel": "[1.0.59]",
+    "UiPath.DataService.Activities": "[25.2.0]",
     "UiPath.Excel.Activities": "[2.24.4]",
     "UiPath.System.Activities": "[25.2.2]",
     "UiPath.Testing.Activities": "[24.10.4]",
     "UiPath.UIAutomation.Activities": "[24.10.11]"
   },
   "webServices": [],
-  "entitiesStores": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "DefaultTenant",
+      "namespace": "TR_GFR_Dispatcher",
+      "uniqueReference": "P2E9EvziBMM7+m93dIyUcIzkkl6da5VgQ8c5P+2BEJo="
+    }
+  ],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
   "projectVersion": "1.0.29",

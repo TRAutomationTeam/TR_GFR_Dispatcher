@@ -11,7 +11,7 @@
   <this:SequenceforNewFolder.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:SequenceforNewFolder.in_Config>
-  <sap:VirtualizedContainerService.HintSize>1408.8,3696.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,3776.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -153,7 +153,7 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence for New Folder" sap:VirtualizedContainerService.HintSize="1110.4,3632" sap2010:WorkflowViewState.IdRef="Sequence_216">
+  <Sequence DisplayName="Sequence for New Folder" sap:VirtualizedContainerService.HintSize="1110.4,3712" sap2010:WorkflowViewState.IdRef="Sequence_216">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strAssignedTo" />
     </Sequence.Variables>
@@ -176,19 +176,19 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: My Work | GoFileRoom" sap:VirtualizedContainerService.HintSize="1048,3393.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3daa3002-49da-4c8c-be8c-d5a060063f30" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: My Work | GoFileRoom" sap:VirtualizedContainerService.HintSize="1048,3473.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3daa3002-49da-4c8c-be8c-d5a060063f30" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do 'GFR Dispatcher'" sap:VirtualizedContainerService.HintSize="1014.4,3153.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do 'GFR Dispatcher'" sap:VirtualizedContainerService.HintSize="1014.4,3233.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope DisplayName="Retry Scope 'My Work'" sap:VirtualizedContainerService.HintSize="952,640" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:RetryScope DisplayName="Retry Scope 'My Work'" sap:VirtualizedContainerService.HintSize="952,720" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_211">
@@ -197,9 +197,9 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Delay_WaitPeriod&quot;))).TotalMilliseconds]" DisplayName="Click 'My Work'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3daa3002-49da-4c8c-be8c-d5a060063f30" Timeout="[Convert.ToDouble(in_Config(&quot;Timeout_GFR&quot;))]" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'My Work'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3daa3002-49da-4c8c-be8c-d5a060063f30" Timeout="[TimeSpan.FromMilliseconds(Convert.ToInt32(in_Config(&quot;Timeout_L&quot;))).TotalMilliseconds]" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/searchTop.asp?md=&amp;FolderCnt=0&amp;fromql=" CVScreenId="4b1e5dd2-1998-4c06-80da-1db89d542dce" CvTextArea="392, 191, 65, 17" CvTextArgument="My Work" CvType="Text" DesignTimeRectangle="392, 188, 62, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='My Work' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='My Work' tag='A' type='' class='' check:text='My Work' /&gt;" Guid="060f571a-dfed-4e37-b970-03ef4b3e40a9" ImageBase64="" InformativeScreenshot="64294ad74649e8fc8d9a8bf95f5fff05.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/searchTop.asp?md=&amp;FolderCnt=0&amp;fromql=" CVScreenId="4b1e5dd2-1998-4c06-80da-1db89d542dce" DesignTimeRectangle="394, 191, 63, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='My Work' /&gt;" Guid="060f571a-dfed-4e37-b970-03ef4b3e40a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAVCAYAAAAdHVOZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHUSURBVFhH7VPbjYQwDLzOaYHtIaKKpQm6WJrIJSF2xsY+WLiPvVNGskRM/MiM/RU7GJ0MQCcD0MkAdDIAQMYSwzDEodr4XKs/Y43zo/0bpqX63wHlGOP8qq6MJTg1qZ+Qvu7gfB6XjOExp/YJ6t8lMlKWaYsPEE6+Xc3XHEftu4RbZIxxLApCMKhX7CIZnIfj1cRBzfU5Fp+cliu4RUaIQSnIik7wGFM5ZxUIOgbOs1cTXkAEsQlRWv8z38sEaDJAACWqScZSFdxUoeDm35IYDz8cbRUD+eQk7NUU64TGtShG/5O5OI8iIsMmAx+F32rM9SifGW1UXKjv1cxBdKa7Be3xm6+dZf32Lpp4zqtgk8EKtmkoBRQZchKMSbHAOdJqiPtOzQxdt4LXpvipf12/kcRmTEWGQ0Y6qbEs7O+aAgIWpaYHULkY3Ddrlh/vkLH132CQ4QjmksENWD5oihuq9tOKbCACq+EDrZoZb62JR4Z6gyGaTwYqSIGWQkLpgxWpwAloj0uwalboqWHjeyfJyJ6aS9RO8MkABY92lxs12DbBE6DJM2oC9BTKPs6T0UiXd4GM6yAyjlfks3GfDGb53Ip8Mm6R4e7+H8WvrMl/QSeDEeM3RQ8bkq81k3QAAAAASUVORK5CYII=" InformativeScreenshot="773b5bc080995963d7e230634f9d4414.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.PointOffset>
                             <uix:PointOffset Position="BottomLeft" X="23" Y="-3" />
                           </uix:TargetAnchorable.PointOffset>
