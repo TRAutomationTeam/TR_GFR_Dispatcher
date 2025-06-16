@@ -17,7 +17,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,3605.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,6153.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="118">
@@ -177,7 +177,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="598.4,3540.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="713.6,6088.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strLeadsheets" />
       <Variable x:TypeArguments="x:String" Name="strConsent" />
@@ -223,7 +223,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="536,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="651.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -231,7 +231,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="Sequence for Login" sap:VirtualizedContainerService.HintSize="536,56.8" sap2010:WorkflowViewState.IdRef="Sequence_219">
+    <Sequence DisplayName="Sequence for Login" sap:VirtualizedContainerService.HintSize="651.2,2107.2" sap2010:WorkflowViewState.IdRef="Sequence_219">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strUsernameLive" />
         <Variable x:TypeArguments="x:String" Name="strUsernameQAT" />
@@ -241,31 +241,31 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="GFR_Username_Live" CacheStrategy="None" DisplayName="Get Asset 'GFR Username'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="GFR_Username_Live" CacheStrategy="None" DisplayName="Get Asset 'GFR Username'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="588.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">[strUsernameLive]</OutArgument>
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="GFR_Credential_QAT" CacheStrategy="None" DisplayName="Get Credential 'GFR Live Credential'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPasswordQAT]" Username="[strUsernameQAT]" />
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="686.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[PasswordTr]" Username="[UsernameTr]" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GoFileRoom" sap:VirtualizedContainerService.HintSize="686.4,4444.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V2" WindowResize="Maximize">
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="GFR_Credential_QAT" CacheStrategy="None" DisplayName="Get Credential 'GFR Live Credential'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="588.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPasswordQAT]" Username="[strUsernameQAT]" />
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential 'TR SSO Login'" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="588.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[PasswordTr]" Username="[UsernameTr]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GoFileRoom" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="588.8,1460.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="652.8,4204.8" sap2010:WorkflowViewState.IdRef="Sequence_226">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,1220.8" sap2010:WorkflowViewState.IdRef="Sequence_226">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIfV2 Condition="[in_Config(&quot;Environment&quot;).ToString().Contains(&quot;Live&quot;)]" DisplayName="Else If 'Environment'" sap:VirtualizedContainerService.HintSize="590.4,3097.6" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+              <ui:IfElseIfV2 Condition="[in_Config(&quot;Environment&quot;).ToString().Contains(&quot;Live&quot;)]" DisplayName="Else If 'Environment'" sap:VirtualizedContainerService.HintSize="492.8,56.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                 <ui:IfElseIfV2.Else>
                   <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_224">
                     <sap:WorkflowViewStateService.ViewState>
@@ -287,13 +287,13 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'chrome.exe GoFileRoom'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameQAT]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'chrome.exe GoFileRoom'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameQAT]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/login/" CvTextArgument="Username" CvType="Text" DesignTimeRectangle="589, 374, 244, 28" DesignTimeScaleFactor="1" Guid="245711fb-b8e5-4d35-a5ca-8a63e071bed2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAcCAYAAABWOJIRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHMSURBVHhe7dc9bsJAEEDhXIWCPoqUQEEOAAUXAIkzWFzAojYH8Gkn3l+PLRtWVGH8ik/C3mXZ5nnNx2b7KwDe2892J59f30LQgAEEDRhC0IAhBA0YQtCAIQQNGJKDbpur7AeDF6nbu1QHfQ/Af0bQgCHlQZ9v0rZtdJNTnneUqkn3W6nPan5zl8bdd2v765vUea5+WAzX6PcS7tfVNazTaaqjnOo0t2AfwIIUBj2Me191oXZhuc8+rvoSvuOjj/P05zyWQovxxe8N1vC/NZqX9hbXCL8dxp7uw68JLMNLQQ/n6NMwnqju2kelTtDRtXso9BFrao1RtJuDO6n7NVzEYezBPuJcYAnKX7l9TN0p6OS5IaT0mpv4yFzAes3R9SBovXakg85hPglaf9/JDwJgIeaD9vFMv7b2MY6i14qDHp3CEyd0WdAz+wAWJAftTkj9iur/k6YARyHN/oeOJ61f59Wg3by8l9KgH+wjzgWWIAedIsivrDrGjg9wcixEl8YGYRYFHcfS2t29PtTyoGf3ASxIH/TEIID3QtCAIQQNGELQgCEEDRhC0IAhBA0YQtCAIQQNGELQgCEq6F13A8C780Gv12sB8P5Wq5X8AcJ4BZQhUw5RAAAAAElFTkSuQmCC" InformativeScreenshot="5b1db21c7cacc90f7bc3df483a4c5ba2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoFileRoom' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="492.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                          <uix:NCheckState DisplayName="Check App State 'QAT pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                          <uix:NCheckState DisplayName="Check App State 'QAT pop up'" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="492.8,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_222">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -301,7 +301,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK Qat pop up'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK Qat pop up'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="1036, 272, 90, 49" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" Guid="fc3994e1-6bce-4b08-9751-b1c089dec7b4" InformativeScreenshot="2946aefe0cf5add7e53a2a3052c532be.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='GoFileRoom - Google Chrome' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -324,12 +324,12 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NCheckState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'QAT password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" SecureText="[strPasswordQAT]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'QAT password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" SecureText="[strPasswordQAT]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://trten.sharepoint.com/" CVScreenId="e1fd9c17-8e28-4008-a511-bdd779ab1471" CvElementArea="766, 595, 405, 71" CvType="InputBox" DesignTimeRectangle="770, 597, 343, 65" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='input c4ea79246 c2946f7ad' aaname='                             Password                           ' /&gt;" Guid="837981ec-7488-4343-b716-793fe28dc33a" InformativeScreenshot="70872bc45110c81d842913c118266b3e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sign in to GoFileRoom | Thomson Reuters' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign in QAT'" sap:VirtualizedContainerService.HintSize="492.8,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign in QAT'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://trten.sharepoint.com/" CVScreenId="e1fd9c17-8e28-4008-a511-bdd779ab1471" CvElementArea="766, 737, 405, 70" CvTextArea="935, 764, 67, 22" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="769, 740, 400, 65" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='c0a486a03 c3a925026 cc4e2760d cf0fbb154 _button-login-password' aaname='Sign in' check:innerText='Sign in' /&gt;" Guid="0a2b8ede-2f82-419b-9ce0-cf1c6ee07eee" ImageBase64="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" InformativeScreenshot="6fa0ca9d0bec7bf414a83bbb9b24a0b5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sign in to GoFileRoom | Thomson Reuters' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                             </uix:NClick.Target>
@@ -341,8 +341,8 @@
                 </ui:IfElseIfV2.ElseIfs>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:IfElseIfV2.Then>
@@ -352,13 +352,13 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameLive]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username Login'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[strUsernameLive]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://qed.gofileroom.com/login/" DesignTimeRectangle="840, 525, 305, 35" DesignTimeScaleFactor="1.25" Guid="245711fb-b8e5-4d35-a5ca-8a63e071bed2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAcCAYAAABWOJIRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHMSURBVHhe7dc9bsJAEEDhXIWCPoqUQEEOAAUXAIkzWFzAojYH8Gkn3l+PLRtWVGH8ik/C3mXZ5nnNx2b7KwDe2892J59f30LQgAEEDRhC0IAhBA0YQtCAIQQNGJKDbpur7AeDF6nbu1QHfQ/Af0bQgCHlQZ9v0rZtdJNTnneUqkn3W6nPan5zl8bdd2v765vUea5+WAzX6PcS7tfVNazTaaqjnOo0t2AfwIIUBj2Me191oXZhuc8+rvoSvuOjj/P05zyWQovxxe8N1vC/NZqX9hbXCL8dxp7uw68JLMNLQQ/n6NMwnqju2kelTtDRtXso9BFrao1RtJuDO6n7NVzEYezBPuJcYAnKX7l9TN0p6OS5IaT0mpv4yFzAes3R9SBovXakg85hPglaf9/JDwJgIeaD9vFMv7b2MY6i14qDHp3CEyd0WdAz+wAWJAftTkj9iur/k6YARyHN/oeOJ61f59Wg3by8l9KgH+wjzgWWIAedIsivrDrGjg9wcixEl8YGYRYFHcfS2t29PtTyoGf3ASxIH/TEIID3QtCAIQQNGELQgCEEDRhC0IAhBA0YQtCAIQQNGELQgCEq6F13A8C780Gv12sB8P5Wq5X8AcJ4BZQhUw5RAAAAAElFTkSuQmCC" InformativeScreenshot="3e30dc02595bd22f3680e7a136b127ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoFileRoom' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Enter'" sap:VirtualizedContainerService.HintSize="492.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                    <uix:NCheckState DisplayName="Check App State 'Live pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,514.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Enter'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="492.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                    <uix:NCheckState DisplayName="Check App State 'Live pop up'" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="492.8,514.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_220">
                           <sap:WorkflowViewStateService.ViewState>
@@ -366,7 +366,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK live pop up'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK live pop up'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="1036, 272, 90, 49" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" Guid="fc3994e1-6bce-4b08-9751-b1c089dec7b4" ImageBase64="" InformativeScreenshot="a82daaba0fcd97925bf0a6f129c9b6bc.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
@@ -386,15 +386,15 @@
                   </Sequence>
                 </ui:IfElseIfV2.Then>
               </ui:IfElseIfV2>
-              <uix:NCheckState DisplayName="Check App State 'Enterprise Single'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="590.4,1016.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Timeout="[Convert.ToDouble(in_Config(&quot;Delay_15s&quot;))]" Version="V3">
+              <uix:NCheckState DisplayName="Check App State 'Enterprise Single'" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="492.8,1073.6" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Timeout="[Convert.ToDouble(in_Config(&quot;Delay_15s&quot;))]" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,773.6" sap2010:WorkflowViewState.IdRef="Sequence_225">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,830.4" sap2010:WorkflowViewState.IdRef="Sequence_225">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Username TR login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[UsernameTr]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Username TR login'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="[UsernameTr]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=3j5wB3QQbIQj4JzUZoAxcgao6OnVEi&amp;nonce=VCMXD0eiCJDlU3AzODzV6H&amp;client_id=dc-sx9StZPCnrCCtUc6VIOU1d" DesignTimeRectangle="722, 455, 475, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='username' /&gt;" Guid="7a96ab90-f284-479c-95b9-54d1b34de877" InformativeScreenshot="cb9bafa09787fa9a0659fa8eaf3341da.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -405,7 +405,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Password TR login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" IsPassword="True" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" SecureText="[PasswordTr]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Password TR login'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" IsPassword="True" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" SecureText="[PasswordTr]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=3j5wB3QQbIQj4JzUZoAxcgao6OnVEi&amp;nonce=VCMXD0eiCJDlU3AzODzV6H&amp;client_id=dc-sx9StZPCnrCCtUc6VIOU1d" DesignTimeRectangle="722, 557, 475, 50" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' /&gt;" Guid="cba874fc-8403-4bd1-a481-da1f6f677465" InformativeScreenshot="37918d277a5ccf8ec948d0b93919aaf2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enterprise Single Sign-On' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -416,11 +416,104 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign On'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign On'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=3j5wB3QQbIQj4JzUZoAxcgao6OnVEi&amp;nonce=VCMXD0eiCJDlU3AzODzV6H&amp;client_id=dc-sx9StZPCnrCCtUc6VIOU1d" DesignTimeRectangle="908, 737, 103, 45" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='signOnButton' /&gt;" Guid="f8964e96-ab0f-4247-b0b4-bbffdb353d25" InformativeScreenshot="3372438074b97ac2364d2324c4f0eb47.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enterprise Single Sign-On' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'INPUT otp'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,932" sap2010:WorkflowViewState.IdRef="Sequence_227">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;SSO authentication required&quot;]" />
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: PingID" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" IsDisplayNameAuto="True" ScopeGuid="abcdc168-2a64-4d5a-be6e-20ebb4a34f53" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1464" sap2010:WorkflowViewState.IdRef="Sequence_228">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="ss:SecureString" Name="ssPingId_Pin" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="PingID_Password" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="353.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[ssPingId_Pin]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Button'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="abcdc168-2a64-4d5a-be6e-20ebb4a34f53" SecureText="[ssPingId_Pin]" Version="V4">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable CVScreenId="4ac6581b-1d0b-49cb-994c-f9ea10e355fa" CvElementArea="25, 214, 342, 49" CvTextArea="155, 228, 87, 20" CvTextArgument="Enter PIN" CvType="Button" DesignTimeRectangle="25, 214, 342, 49" ElementType="Button" Guid="72b4ec2b-af5c-48d1-a6a1-912d6ed75059" ImageBase64="" InformativeScreenshot="bf9d85df21df23fb063b0071f77fce43.png" ScopeSelectorArgument="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='*' /&gt;" SearchSteps="CV, SemanticSelector" SemanticSelectorArgument="Input field for entering PIN to unlock PingID" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="abcdc168-2a64-4d5a-be6e-20ebb4a34f53" Version="V4">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CVScreenId="a1cc3cb7-42a6-4d52-9054-cd2951df48ed" CvElementArea="26, 279, 338, 68" CvTextArea="170, 302, 51, 22" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="26, 279, 338, 68" ElementType="Button" Guid="7d0156b0-06bd-428d-a20f-fd479fa72f73" ImageBase64="" InformativeScreenshot="f67e29311c2a88489ec35fa3b857b5f1.png" ScopeSelectorArgument="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='PingID' /&gt;" SearchSteps="CV, SemanticSelector" SemanticSelectorArgument="Proceed to the next step" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4" />
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="abcdc168-2a64-4d5a-be6e-20ebb4a34f53" Version="V4">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CVScreenId="fe1d3f83-5ec7-40c5-9948-866cb1a94aa9" CvElementArea="26, 284, 168, 67" CvTextArea="66, 307, 85, 22" CvTextArgument="Refresh" CvType="Button" DesignTimeRectangle="26, 284, 168, 69" ElementType="Button" Guid="a0ddb6c2-fa3c-4c21-8d0b-ae71904848cb" ImageBase64="" InformativeScreenshot="df473674da2b6dac122e835702268a1a.png" ScopeSelectorArgument="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='PingID' /&gt;" SearchSteps="CV, SemanticSelector" SemanticSelectorArgument="Refresh the current view or data" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="abcdc168-2a64-4d5a-be6e-20ebb4a34f53" Version="V4">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CVScreenId="3813f81b-5686-41c1-b929-231b87b14ef7" CvElementArea="198, 284, 167, 69" CvTextArea="250, 307, 62, 27" CvTextArgument="Copy" CvType="Button" DesignTimeRectangle="198, 284, 167, 69" ElementType="Button" Guid="e3e4aa45-385b-484b-8417-3dfc2c39972a" ImageBase64="" InformativeScreenshot="11cccdc14deecd06d687fcc7bf670a1d.png" ScopeSelectorArgument="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='PingID' /&gt;" SearchSteps="CV, SemanticSelector" SemanticSelectorArgument="Button to copy information or data" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Entered the SSO code.&quot;]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="773, 375, 393, 379" FilePath="[in_Config(&quot;str_PingIDApplication&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUYSURBVFhH7ZbbbxRVHMf7FxiFgqWXhbYUWkppC9X0ttsqikpMFMolRnuJDwKWhyYYEoPR9Mn4oEFjlEhM1JpohUJlewFM4y3GBy4SaUU0ICad2WVnu9u9dHe73d2v3zOzs7vTzrZ986WEb2Z6fmfP+czvdk6OXNSM/1MrACsAKwArAAsBCpsgF2RI/C1kZjOTPneZMgKIH1v4LGmBXNqqSbzr9g229LiZijl3vdUIvYQ0gMK0pLx6SGu2QlpbqimX73kNkLiglLctPb5AFZDy6yAVc53SDJB5G86XEWBtI3/IHz+6E46WVjhsfK97DBLnSIW01VrhsNpStpSsnFffCqmckOsq+QFUQQM9tjRETsrtJJYerITziTZ4P+uDf+Qi/EMj8Hx8Go7m3ZC3NMHd+zb839rhHx6lbVi1q7IPw3f2HLzvn4L71R44Wp+FZKkheI0GsAhEjpo4Fm5easPkKgtc7R0I3/4b8VAY8ZkQQtdv4H7bfshNVvgH7YhN+2gL0Taj2jXNIBYIYs7jxey9fxEYvQzlaA/kylrNC0XZITIArCqA0tGJyN1/kEgkkIjHEbo5Aef+g5CbbQgMjSIejqRs6pMC//NFG6MEfHh8AlNvvMnQ0Qt6KESYzQH4RwkhHiqD62AXQtduIOpSEL3vQvCXX+F8bg89QAD7CAHCqY1iPj+U147D81YvgmPfY87rTcMJEM51ND7JRN6iJaaeawYA3TWEkB6ug6N6F5T2Q3B3H4X7SDffD0PevJ0esBJg2AAwN+XBZFktJleXw7mngyEaQswf0LyRlHK4m9XDSiqiF+jp+aEwVkE+s7iIZVixA1JNraaqRmZ1MROxmSEYUgHAzYVEzKUyeu6B7Zgs3ArlUDcit//ixiI8Qgl4T37E8HLdNXXsE+wjCwDEgF4FudVwtj6Pqfc+wPQXX2L68z5MvfMuS4x2JqHuAQPAJnqOYZQKNsO56ykEf/wJ8Wg0Ncf/zSDkHTauXZ4OgwHAUAXFUF7sRHjiFl3pZ4x9mLlyFc69baY5oAGwSeXTa/mbILNH+O30EqtCnxO4NMZewV5CLy4DgFXQ2cUquKfFkAuExv+A8wCrYDkAjU3wnR9ELBhMzQmO/cC+sJMAJVq7Nk1C4X4doJ1leOduaoHQ7+MswwMGAGMIFnoglumBi98xf1o0D2w088B8APaB2TvJPkCFbi4FINo0c6BQ5MDTzIGf1RzQAXxfD6gtXMqtyBKCBQBdSwLoi6tluJEVsIpluPsFJtx55k2yDMUcPpVXjmjngyhB7mNeBYsCiE6YCcBOmAQQiar0HIP79RNsv5cwp7g5ntycEsno4MEm5VZqX5+xcXYAsxzYJwBYhhcIwDab2oCujhA2KjsQE+NJaNUWmWVH/Y25wSYkTlKTr9cATKsg4yxgT3fqZwFPwXhEnAUagJij/0ttHoupnglduQb3sePGs2De5iYA6+F6iX3g1p9qKYm2OnP1OvvAPpaYlSV2QU08cfIJWyyQFM8EMS48EWbO+Pr6uc7LbOHbMg6ibADCIDohJ0qrq+B8fC88p07DN3AOvjMD8Jz8EI6GZ9TLhnKiF77+M0nbWd4BBtQ501/1w/vJp5hiLriEt0TcC3h7El+/yOZC6bNAPNex71vYr2vZMBr4rGfiVLOGC5LttkqMUQ0cFzZdj/A2JOZZGO/cDYx7NSTx5VnininzS6m4XOoXzRJuqNqorJdSzheXV2HX11liY03N+A8ZmG8qVzCLzQAAAABJRU5ErkJggg==" InformativeScreenshot="87c35f375df1e4b079128ef115b188e3.png" Selector="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='PingID' /&gt;" Version="V2" />
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT otp'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Text="%[d(ctrl)]v[u(ctrl)]" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="authenticator.pingone.com/pingid/ppm/auth" CVScreenId="dfcde04f-8fae-44e4-946a-22ca9a3191f3" CvElementArea="846, 440, 245, 66" CvType="InputBox" DesignTimeRectangle="849, 442, 240, 62" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='otp' tag='INPUT' /&gt;" Guid="5fa73230-9e01-473c-a2f5-7c06d45a6e54" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAABCCAYAAABgvPuWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADhSURBVHhe7dMxEYAwAAAxHNZENdR+2VgAAf3LEAm51lobaBAaQoSGkCf0GAM41GfoOSdwGKEhRGgIERpChIYQoSFEaAgRGkKEhhChIURoCBEaQoSGEKEhRGgIERpChIYQoSFEaAgRGkKEhhChIURoCBEaQoSGEKEhRGgIERpChIYQoSFEaAgRGkKEhhChIURoCBEaQoSGEKEhRGgIERpChIYQoSFEaAgRGkKEhhChIURoCBEaQoSGEKEhRGgIERpChIYQoSFEaAgRGkKEhhChIURoCBEaQn5DA2d6hQZOt/YN1nPXeXPfRg0AAAAASUVORK5CYII=" InformativeScreenshot="3b2464cf9f142c8af32c8bd5cff69740.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PingID' /&gt;" SearchSteps="Selector, Image, CV, SemanticSelector" SemanticSelectorArgument="Input field for entering the passcode displayed in PingID desktop" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign On'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c468aa05-2cdb-49e4-8ad1-3d81772099b0" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="authenticator.pingone.com/pingid/ppm/auth" CVScreenId="dfcde04f-8fae-44e4-946a-22ca9a3191f3" CvElementArea="969, 612, 196, 49" CvTextArea="1034, 626, 66, 20" CvTextArgument="Sign On" CvType="Button" DesignTimeRectangle="972, 614, 191, 45" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="b79d91fb-8def-44fe-a961-208b459a8090" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMMAAAAxCAYAAABnJR24AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANgSURBVHhe7ZvHjuMwEAX3q332YXLOOWJy+kYuissecGVZa3snAapDwZbUtjXAqyYpaX4NBoMkIoOkDCIFZRApvMswHA7Tzc1Nent7E+kF5J3cj8igCNJHyP2IDG2FIn1AGUQKyiBSUAaRgjKIFJRBpKAMIgVlECkog0hBGUQKyiBSUAaRgjK0wENb6+vraX5+Ps3NzeXXtbW1dHl52Vr/Xdzf36ft7e20sLCQzxOWl5fT4eFhenl5af2MjEcZGlxfX6fFxcUcsoeHh7yP1729vRy6/f399Pr6msOGMITv8fFx5Hs+m+Pj4yzp1tZWuru7y/s4L4RdWVlJS0tLPoE8JcrQYHNzM48CbZ2VoNUBI4RXV1d/1XwFZ2dnWcyjo6PW48/Pz2ljYyOLGkLLv1GGCkK0urqahWg7/hOIcyTsjARtNYCojHC7u7utx2UUZWhAeOi6k3R8pGmKE+sNggi8v7i4yO/p6NTQrdlmqsPv0cH5zdhXf18TRidqz8/PW4/XMNVjyvT09JS343xPT0/zfn6PqRZ1UdNnlKEBoaDrEhJCylRk3FSjKQNBJWB8Jrr27e1t7uQsbpsyMK9HlKglpAS9a6F+cnKSPzvJ9IfvozbWFJwrfxfrHkYY9rEI5zx2dnb++mwfUYYxEGK6NmGKqzQEt66pZWCNwVqDLlvXQIS/KQNhretiCkRY6/01HJtUhlhbcFGA7aa8Ad/J74YgfUUZJoDuyVWb6Kqxvw5XzNGbwsA4GWI7mESGaUaGqK1HBmUYjzJMASMFU4oIYh2uuCQbXbjmI2X4iDVDs04Z/qAMU9A17WDhTMA/e2SImlmuJilDN8pQQQclLG3dHbpGhlnWDLPIACHltPcZlKEbZaggDISFoHHHOYKEJDziwJrh4ODgvb4ZLkaFCOkkV5NmlQFmuQOtDN0oQwMCxXyccBA2Qswr2815elu4GFWoJezQdZ/hf2QAJGAkQkDOM656jXs2SRm6UYYvINYTXfcP5PtRhg+EjkznrR/c47Isawnoe+f96SjDB0LYmXIwX49pEu9ZfyjCz0cZRArKIFJQBpGCMogUlEGkoAwiBWUQKSiDSEEZRArKIFJQBpGCMogUlEGkMCJD87+jRPoAuR+RYTgcKoT0CvJO7kdkEOk3g/QbR9kLrinCs2EAAAAASUVORK5CYII=" InformativeScreenshot="9fa9645858a4e1178db7b4029001a609.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PingID' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Authenticated&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_229">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Bypass the SSO authentication because of the user is already authenticated&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="authenticator.pingone.com/pingid/ppm/auth" DesignTimeRectangle="849, 442, 240, 62" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='otp' tag='INPUT' /&gt;" Guid="6966987f-24b7-4eba-9c19-21283c3a5e89" InformativeScreenshot="8e44795bc31e0f2e46369bc6ed7efcb0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PingID' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.Target>
@@ -437,7 +530,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="97bfb5256575e8fdc11c4d955ddbba20.jpg" Selector="&lt;html app='chrome.exe' url='https://www.gofileroom.com/login/' /&gt;" Title="GoFileRoom" Url="[in_Config(&quot;GFR_URL&quot;).ToString]" />
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="97bfb5256575e8fdc11c4d955ddbba20.jpg" Selector="&lt;html app='chrome.exe' url='https://www.gofileroom.com/login/' /&gt;" Url="[in_Config(&quot;GFR_URL&quot;).ToString]" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -447,7 +540,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="536,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="651.2,554.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -567,11 +660,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="536,56.8" sap2010:WorkflowViewState.IdRef="Sequence_204">
+    <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="651.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_204">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="str_InputRowIndex" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_InputDataUpdated" />
@@ -842,7 +935,7 @@
         </If>
       </Sequence>
     </Sequence>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="536,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="651.2,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SequenceforNewFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="536,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SequenceforNewFolder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
@@ -1008,11 +1101,11 @@
                           </uc:CVCache.CvAnchorRelations>
                           <uc:CVCache.CvUiElements>
                             <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
-                              <uc:CvElementInfo Category="Icon" Region="2, 53, 20, 20" />
-                              <uc:CvElementInfo Category="ArrowButton" Region="1504, 12, 20, 20" />
-                              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1506, 12, 17, 17" />
-                              <uc:CvElementInfo Category="InputBox" Region="0, 44, 1528, 35" />
-                              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="2, 53, 20, 20" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Region="2, 53, 20, 20" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Region="1504, 12, 20, 20" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="1506, 12, 17, 17" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="0, 44, 1528, 35" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="2, 53, 20, 20" />
                             </scg:List>
                           </uc:CVCache.CvUiElements>
                           <uc:CVCache.OcrTexts>

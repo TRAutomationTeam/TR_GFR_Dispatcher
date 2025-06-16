@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="7RxlycTqRE6kwAj7hbFoMw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://qed.gofileroom.com/searchTop.asp?md=&amp;FolderCnt=0&amp;fromql=" CVScreenId="4b1e5dd2-1998-4c06-80da-1db89d542dce" DesignTimeRectangle="394, 191, 63, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='My Work' /&gt;" Guid="060f571a-dfed-4e37-b970-03ef4b3e40a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAVCAYAAAAdHVOZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHUSURBVFhH7VPbjYQwDLzOaYHtIaKKpQm6WJrIJSF2xsY+WLiPvVNGskRM/MiM/RU7GJ0MQCcD0MkAdDIAQMYSwzDEodr4XKs/Y43zo/0bpqX63wHlGOP8qq6MJTg1qZ+Qvu7gfB6XjOExp/YJ6t8lMlKWaYsPEE6+Xc3XHEftu4RbZIxxLApCMKhX7CIZnIfj1cRBzfU5Fp+cliu4RUaIQSnIik7wGFM5ZxUIOgbOs1cTXkAEsQlRWv8z38sEaDJAACWqScZSFdxUoeDm35IYDz8cbRUD+eQk7NUU64TGtShG/5O5OI8iIsMmAx+F32rM9SifGW1UXKjv1cxBdKa7Be3xm6+dZf32Lpp4zqtgk8EKtmkoBRQZchKMSbHAOdJqiPtOzQxdt4LXpvipf12/kcRmTEWGQ0Y6qbEs7O+aAgIWpaYHULkY3Ddrlh/vkLH132CQ4QjmksENWD5oihuq9tOKbCACq+EDrZoZb62JR4Z6gyGaTwYqSIGWQkLpgxWpwAloj0uwalboqWHjeyfJyJ6aS9RO8MkABY92lxs12DbBE6DJM2oC9BTKPs6T0UiXd4GM6yAyjlfks3GfDGb53Ip8Mm6R4e7+H8WvrMl/QSeDEeM3RQ8bkq81k3QAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector, Image, SemanticSelector" SemanticSelectorArgument="Navigation option for accessing various sections like Add Documents, My Work, Search Workflows, and Reports" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="BottomLeft" X="23" Y="-3" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="0c5b443b004003d0dba090de4e1801d5.png" xmlns="">0O7m_7oihMkKPx7T6jyy79A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

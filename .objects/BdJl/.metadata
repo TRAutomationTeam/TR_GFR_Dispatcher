@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome My Work  GoFileRoom",
+  "Type": "App",
+  "Id": "BdJlSu5hikaJq2cwvI6WOw",
+  "Reference": "rXH7XqqiIUWeRrkWJZcN3w/BdJlSu5hikaJq2cwvI6WOw",
+  "Created": "2025-05-30T10:12:10.0025563Z",
+  "Updated": "2025-05-30T10:12:10.0025563Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

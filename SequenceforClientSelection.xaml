@@ -3,7 +3,7 @@
     <x:Property Name="out_GetTextStrClientNumber" Type="OutArgument(x:String)" />
     <x:Property Name="io_DictTestSummaryReport" Type="InOutArgument(scg:Dictionary(x:String, sd:DataTable))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1408.8,1621.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1581.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -132,13 +132,13 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence 'Client Selection'" sap:VirtualizedContainerService.HintSize="1110.4,1556.8" sap2010:WorkflowViewState.IdRef="Sequence_196">
+  <Sequence DisplayName="Sequence 'Client Selection'" sap:VirtualizedContainerService.HintSize="1110.4,1516.8" sap2010:WorkflowViewState.IdRef="Sequence_196">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Matching Values" sap:VirtualizedContainerService.HintSize="1048,1468" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Matching Values" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1048,1428" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -151,18 +151,18 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'Client Number'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" TextString="[out_GetTextStrClientNumber]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Client Number'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" TextString="[out_GetTextStrClientNumber]" Version="V4">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="gofileroom.com/lookupvalues.asp" CVScreenId="ad7a8be6-a449-47eb-bca2-69ba42b4dbea" DesignTimeRectangle="498, 176, 481, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableCol='2' tableRow='2' tag='TD' /&gt;" Guid="93ad6d2a-c867-4152-a91a-a3e35838dd34" ImageBase64="" InformativeScreenshot="dd6a877585f02fc66adf548794c1d12a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="gofileroom.com/lookupvalues.asp" CVScreenId="ad7a8be6-a449-47eb-bca2-69ba42b4dbea" DesignTimeRectangle="498, 176, 481, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableCol='2' tableRow='2' tag='TD' /&gt;" Guid="93ad6d2a-c867-4152-a91a-a3e35838dd34" ImageBase64="" InformativeScreenshot="c42b400afef3fbc4cd3d6b182f6e6a22.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CVScreenId="f336343a-c81a-4a43-9f59-53a0f2d571c1" CvTextArea="501, 151, 98, 13" CvTextArgument="Client Number" CvType="Text" DesignTimeRectangle="502, 151, 97, 13" ElementType="Text" Guid="d8d23139-28e5-40cb-aa79-24dfa8579fa9" SearchSteps="CV" />
+                      <uix:Target CVScreenId="f336343a-c81a-4a43-9f59-53a0f2d571c1" CvTextArea="501, 151, 98, 13" CvTextArgument="Client Number" CvType="Text" DesignTimeRectangle="503, 152, 96, 13" ElementType="Text" Guid="d8d23139-28e5-40cb-aa79-24dfa8579fa9" SearchSteps="CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NCheckState DisplayName="Check App State 'Client Name'" sap:VirtualizedContainerService.HintSize="952,725.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Client Name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="952,725.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears 'TC_08 Pass'" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_197">
                   <sap:WorkflowViewStateService.ViewState>
@@ -202,7 +202,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="b8f6bfe0-d0f4-4a43-8d99-a65e0a949860" DesignTimeRectangle="17, 144, 481, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='hdr1' tableRow='1' tag='TD' /&gt;" Guid="843e7b91-430a-41cd-bb73-ac28c4fec0d3" InformativeScreenshot="66d806ab71d99867bd322a42b5af6427.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="gofileroom.com/lookupvalues.asp" CVScreenId="3bba1946-417c-4d05-a62c-0995488c3612" DesignTimeRectangle="17, 144, 481, 32" ElementType="Text" FuzzySelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;&lt;webctrl id='hdr1' type='' tag='TD' class='lookup_grid_hdr' aaname='Client Name  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Client Name' /&gt;" Guid="5eab15c2-0fa0-44d7-adb8-c0216aecc073" InformativeScreenshot="0b431c511f53177c740fafe6634a3bb8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;" SearchSteps="FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -211,12 +211,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Client Name'" sap:VirtualizedContainerService.HintSize="952,182.4" sap2010:WorkflowViewState.IdRef="NClick_128" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Client Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="952,182.4" sap2010:WorkflowViewState.IdRef="NClick_128" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e06bf55-82d0-4090-b888-97a9d52a49d4" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/lookupvalues.asp?RefPage=taxfolder&amp;Index=0000000001&amp;Criteria=ACCENTURE*" DesignTimeRectangle="17, 176, 419, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='1' type='' tag='TD' class='lookup_grid_data' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; ACCENTURE' /&gt;" Guid="f29e47d3-beeb-4013-b12c-db75153f5ad1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAYCAYAAABHox5vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIFSURBVHhe7dm7kYMwFEBROqQsSqENZ0qcuwRCDxVo9XvogbT8LEe+Z+bNeiUMbHIXj7v3+239vF4v+3g8GIZhmAsj7SSmDMMwH0wR0+fzaQEA10g7iSkAfICYAkADxBQAGiCmANAAMQWABm7H1Ayd7frRTun3bLJj7/a6NMUxO/tmyOtqBuP2ptH27nU/qrOFtcGa7TnVhOPDef1xil9L1w5/y/a96r6q+9vzAfhpN2Nq7OBiMgy91W2L6+vgTWOvwnSwX4ueSDFd7S8xVWprZ2Iaii3ifcpSuQ8Aa/di6kPk4yI/hQpUNtnJuPEvz+zvxtTFe1TX/FpM45pEn5gCOHIrpmZ5Io1PqJKZo+gcRilEzx2zmnQtienkP9LrtW/EtPJkur2v4p8CgF92I6YuNCokPjQSnfCRfSeWR/vV6Iklpum1P0/LmG5jqe7z8J8AgJ93OaYhiP+FRwUqi18OhUPO7J+JqRMiPp6M6X+B1TFdYrl+KvWIKYAjF2Oqwrfw8ZHIxRB97wuoHFM5V3F8LZzp2Hzf6dv/tFDEshJuYgpgz7WYVkMVY5MDKZFLUzyJ7uyHmKo9GR+yIqZ+yT8ln4mpE9bVOdV1a7GM547XC/v6vWnoKwBx8ckUAFBDTAGgAWIKAA0QUwBogJgCQAPEFAAaKGI6zzPDMAxzc4gpwzDMxzPbP8yeKw7REayoAAAAAElFTkSuQmCC" InformativeScreenshot="d008e5cb99247d4588e75917ffa1d263.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible">
+                <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/lookupvalues.asp?RefPage=taxfolder&amp;Index=0000000001&amp;Criteria=ACCENTURE*" DesignTimeRectangle="17, 176, 481, 25" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='Matching Values' /&gt;&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='1' tableRow='2' tag='TD' /&gt;" Guid="f29e47d3-beeb-4013-b12c-db75153f5ad1" InformativeScreenshot="33ef992b5bc85db46c1a39c28f88260a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Visible" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="17, 144, 419, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblindex' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='hdr1' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' /&gt;&lt;webctrl id='hdr1' type='' tag='TD' class='lookup_grid_hdr' aaname='Client Name  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Client Name' /&gt;" Guid="95325688-be01-4326-be31-2936f7d76122" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAeCAYAAACR+v1yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIVSURBVHhe7dnRcaswEEBRClM9KoMyKIMaXID/XYZLUEDahZXAthw2b97H1cyZ2CAB+bkRk+H5fCYAwDXEFAAcbDF9PB7pdrsBAL6g7SSmAHABMQUAB8QUABwQUwBwQEwBwAExBQAHxBQAHBBTAHDwRUznNIYhDYMKaZzl3DymsByLU/P5cI1OU0xhnA/H5zHke2/XlnudzQWAf6kzphLSMKZZjpWwSVA9ArqZUnwRSI3pMMQ0rceIKYD/RF9Ml51itRNtvdmZ7gFcxEnWSJxjzOHM53Kom93vNv94rRzQNqbyXefUz7DcK+q5mEZzrf2PQAl5Of7m9wWARldMNUZ5N3jmVUxzhHWd3XFqNOVcnqdR+7Qz1Sgua6uYlmvqummdIztpjbB9vhJqu+Ou13/8nQHA+NOY5qCt4bJsxHTnadd3xFQjOoSQf9q5Gs6siqk8v6w9RFevWWF3CqBPV0x/+5pfYnoW4YsxXT7bUJe58oouAT3uTPtienZfAPikL6bV63A5VgJ18g8o+9m+vlfBvB7TLZ46t4ph/bxdMW3W2Bi3zwEArc6YriQ2ErBqp2pjWIWx3kFu8XwbU3OfbX5Rx1S/N2GUe4Wwz+2L6X6uXINXfAD9vogpAOAVYgoADogpADggpgDggJgCgANiCgAOiCkAOCCmAOCAmAKAg0NM7/d7YjAYDMZ3Q9tJTBkMBuPCKO1M6Qfo9/3RY2mlVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="17, 144, 481, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='tblindex' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='hdr1' type='' tag='TD' class='lookup_grid_hdr' aaname='Client Name  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Client Name' /&gt;" Guid="95325688-be01-4326-be31-2936f7d76122" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVMAAAAeCAYAAACR+v1yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIVSURBVHhe7dnRcaswEEBRClM9KoMyKIMaXID/XYZLUEDahZXAthw2b97H1cyZ2CAB+bkRk+H5fCYAwDXEFAAcbDF9PB7pdrsBAL6g7SSmAHABMQUAB8QUABwQUwBwQEwBwAExBQAHxBQAHBBTAHDwRUznNIYhDYMKaZzl3DymsByLU/P5cI1OU0xhnA/H5zHke2/XlnudzQWAf6kzphLSMKZZjpWwSVA9ArqZUnwRSI3pMMQ0rceIKYD/RF9Ml51itRNtvdmZ7gFcxEnWSJxjzOHM53Kom93vNv94rRzQNqbyXefUz7DcK+q5mEZzrf2PQAl5Of7m9wWARldMNUZ5N3jmVUxzhHWd3XFqNOVcnqdR+7Qz1Sgua6uYlmvqummdIztpjbB9vhJqu+Ou13/8nQHA+NOY5qCt4bJsxHTnadd3xFQjOoSQf9q5Gs6siqk8v6w9RFevWWF3CqBPV0x/+5pfYnoW4YsxXT7bUJe58oouAT3uTPtienZfAPikL6bV63A5VgJ18g8o+9m+vlfBvB7TLZ46t4ph/bxdMW3W2Bi3zwEArc6YriQ2ErBqp2pjWIWx3kFu8XwbU3OfbX5Rx1S/N2GUe4Wwz+2L6X6uXINXfAD9vogpAOAVYgoADogpADggpgDggJgCgANiCgAOiCkAOCCmAOCAmAKAg0NM7/d7YjAYDMZ3Q9tJTBkMBuPCKO1M6Qfo9/3RY2mlVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -226,7 +226,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1, 187, 898, 790" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="7e76c2099631fb3d0c072c93488af6ba.jpg" Selector="&lt;html app='chrome.exe' title='Matching Values' /&gt;" Title="Matching Values" />
+        <uix:TargetApp Area="1, 187, 898, 790" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="7e76c2099631fb3d0c072c93488af6ba.jpg" Selector="&lt;html app='chrome.exe' title='Matching Values' /&gt;" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

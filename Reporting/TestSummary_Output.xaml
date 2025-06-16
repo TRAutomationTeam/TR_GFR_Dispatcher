@@ -10,7 +10,7 @@
   <this:TestSummary_Output.in_strBinderID>
     <InArgument x:TypeArguments="x:String" />
   </this:TestSummary_Output.in_strBinderID>
-  <sap:VirtualizedContainerService.HintSize>1015.2,1571.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1015.2,1395.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -274,7 +274,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="636.8,1506.4" sap2010:WorkflowViewState.IdRef="Sequence_430">
+  <Sequence sap:VirtualizedContainerService.HintSize="636.8,1330.4" sap2010:WorkflowViewState.IdRef="Sequence_430">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strTestSummaryReportPath" />
       <Variable x:TypeArguments="x:String" Name="strClientID" />
@@ -284,9 +284,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_strBinderID is Nothing]" sap:VirtualizedContainerService.HintSize="574.4,1417.6" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[in_strBinderID is Nothing]" sap:VirtualizedContainerService.HintSize="574.4,1241.6" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="540.8,628" sap2010:WorkflowViewState.IdRef="Sequence_437">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="540.8,452" sap2010:WorkflowViewState.IdRef="Sequence_437">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -321,7 +321,6 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <ui:RenameFileX DisplayName="Rename File" FilePath="[strTestSummaryReportPath+&quot;.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="478.4,176" sap2010:WorkflowViewState.IdRef="RenameFileX_4" KeepExtension="True" NewName="[strTestSummaryReportPath.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strClientID+&quot;.xlsx&quot;]" />
           <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_TestSummaryReport]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[in_Component]" WorkbookPath="[strTestSummaryReportPath.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strClientID+&quot;.xlsx&quot;]" />
         </Sequence>
       </If.Then>

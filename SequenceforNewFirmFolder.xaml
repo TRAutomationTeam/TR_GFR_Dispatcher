@@ -10,7 +10,7 @@
   <this:SequenceforNewFirmFolder.in_strEnvironment>
     <InArgument x:TypeArguments="x:String" />
   </this:SequenceforNewFirmFolder.in_strEnvironment>
-  <sap:VirtualizedContainerService.HintSize>1408.8,1435.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1216.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -150,39 +150,39 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence 'New Firm Folder'" sap:VirtualizedContainerService.HintSize="1208,1370.4" sap2010:WorkflowViewState.IdRef="Sequence_200">
+  <Sequence DisplayName="Sequence 'New Firm Folder'" sap:VirtualizedContainerService.HintSize="609.6,1152" sap2010:WorkflowViewState.IdRef="Sequence_200">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground 'Create Tax Folder'" sap:VirtualizedContainerService.HintSize="1145.6,1281.6" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
+    <ui:UseForegroundScope WaitForeground="{x:Null}" DisplayName="Use Foreground 'Create Tax Folder'" sap:VirtualizedContainerService.HintSize="547.2,1063.2" sap2010:WorkflowViewState.IdRef="UseForegroundScope_1">
       <ui:UseForegroundScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
-          <Sequence DisplayName="Do 'Firm Folder'" sap:VirtualizedContainerService.HintSize="1110.4,1180" sap2010:WorkflowViewState.IdRef="Sequence_201">
+          <Sequence DisplayName="Do 'Firm Folder'" sap:VirtualizedContainerService.HintSize="512,961.6" sap2010:WorkflowViewState.IdRef="Sequence_201">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Create New FirmFlow Folder" sap:VirtualizedContainerService.HintSize="1048,1091.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Create New FirmFlow Folder" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,872.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,851.2" sap2010:WorkflowViewState.IdRef="Sequence_208">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,632.8" sap2010:WorkflowViewState.IdRef="Sequence_208">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState DisplayName="Check App State 'TAX FOLDER'" sap:VirtualizedContainerService.HintSize="952,275.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V4">
+                    <uix:NCheckState DisplayName="Check App State 'TAX FOLDER'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V4">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears 'TC_03, 04, 05 Pass'" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_209">
+                        <Sequence DisplayName="Target appears 'TC_03, 04, 05 Pass'" sap:VirtualizedContainerService.HintSize="449.6,1315.2" sap2010:WorkflowViewState.IdRef="Sequence_209">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -260,16 +260,16 @@
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>
-                        <uix:TargetAnchorable BrowserURL="gofileroom.com/trpc/ServiceTypeList.asp" CVScreenId="ff680d7d-6093-4d9d-8e9a-b75839ebc237" DesignTimeRectangle="68, 128, 99, 18" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aaname='Service Type' /&gt;" Guid="fb701090-550d-4521-8f61-0f11b047a4d8" InformativeScreenshot="c84499d8270b1f565e3f6c9b2ec9dabb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="gofileroom.com/trpc/ServiceTypeList.asp" CVScreenId="ff680d7d-6093-4d9d-8e9a-b75839ebc237" DesignTimeRectangle="68, 128, 99, 18" FullSelectorArgument="&lt;webctrl aaname='Service Type' /&gt;" Guid="fb701090-550d-4521-8f61-0f11b047a4d8" ImageBase64="" InformativeScreenshot="019e3d4f54126761242574d5b6f43947.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector" SemanticSelectorArgument="Label indicating the selection of a service type" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
                       </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_219">
                           <sap:WorkflowViewStateService.ViewState>
@@ -277,7 +277,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState DisplayName="Check App State 'Service Type'" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Timeout="7" Version="V4">
+                          <uix:NCheckState DisplayName="Check App State 'Service Type'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Timeout="7" Version="V4">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears 'TC_03 Pass'" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_215">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -325,7 +325,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_220">
                           <sap:WorkflowViewStateService.ViewState>
@@ -333,7 +333,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState DisplayName="Check App State 'Service Type'" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Timeout="[Convert.ToDouble(in_Config(&quot;Delay_WaitPeriod&quot;))]" Version="V4">
+                          <uix:NCheckState DisplayName="Check App State 'Service Type'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Timeout="[Convert.ToDouble(in_Config(&quot;Delay_WaitPeriod&quot;))]" Version="V4">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears 'TC_04 Pass'" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_217">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -391,27 +391,27 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TAX'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="44, 156, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tag='INPUT' type='radio' /&gt;" Guid="48fac929-603c-4fac-aef6-a7f9dd8e8fe9" InformativeScreenshot="9ecdce83a91c13aaf3fb7e1e3840f07b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://www.gofileroom.com/trpc/ServiceTypeList.asp" DesignTimeRectangle="44, 156, 16, 16" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl tag='INPUT' type='radio' /&gt;" Guid="48fac929-603c-4fac-aef6-a7f9dd8e8fe9" InformativeScreenshot="5ce88975e5147d96b05e684755633901.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                              <uix:Target DesignTimeRectangle="69, 155, 24, 14" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='TAX' check:innerText='TAX' /&gt;" Guid="4fd13d9f-5111-440d-900a-e5359df20f0e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAYAAABIB77kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADYSURBVEhL7ZPBDcMwCEU7asZgDXbxrTN4jaxB3ODvYEwlW2pzaZE4hDj/wcd5yM3xQ8DMm2zbm+SMU8JDTWNPNNYza42S7LUUTFhFzaEWEDiTy0kbuyTSd8rEM0kyQktAdYGEWadxQ77GFKrNpGjiEgtAU4fwQERTSO/CCrDaSac/sGsUbN+XDPqZB8JO7AOXZBC1ew6Ik8CgBuFO9JoO6ZlzwO52+rxsxf5O280FsswpIIR8t109AMB23bvGBBA2BRek2fp0/yAC3167D4DfjT/w43EzUOQAZwUZa25p72cAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              <uix:Target DesignTimeRectangle="69, 155, 24, 14" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='TAX' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='TAX' /&gt;" Guid="4fd13d9f-5111-440d-900a-e5359df20f0e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAYAAABIB77kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADYSURBVEhL7ZPBDcMwCEU7asZgDXbxrTN4jaxB3ODvYEwlW2pzaZE4hDj/wcd5yM3xQ8DMm2zbm+SMU8JDTWNPNNYza42S7LUUTFhFzaEWEDiTy0kbuyTSd8rEM0kyQktAdYGEWadxQ77GFKrNpGjiEgtAU4fwQERTSO/CCrDaSac/sGsUbN+XDPqZB8JO7AOXZBC1ew6Ik8CgBuFO9JoO6ZlzwO52+rxsxf5O280FsswpIIR8t109AMB23bvGBBA2BRek2fp0/yAC3167D4DfjT/w43EzUOQAZwUZa25p72cAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK tax folder' " sap:VirtualizedContainerService.HintSize="952,182.4" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="767dc97d-4154-40f5-ae60-abc37cbbffae" Version="V4">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="gofileroom.com/home.html" CVScreenId="a7cbb64a-abb9-454f-a7fa-debebcddd524" DesignTimeRectangle="30, 528, 102, 24" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='OK' check:innerText='OK' /&gt;" Guid="c0575dd4-22cd-450f-9a5d-88e42cc05989" InformativeScreenshot="9a1f560783d1f4412bf4b8f1425cf1da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="gofileroom.com/trpc/ServiceTypeList.asp" CVScreenId="52d9d481-1d1d-4682-8ac9-d745b696f018" DesignTimeRectangle="30, 528, 102, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='btn btn-Main' aaname='OK' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='OK' /&gt;" Guid="ab8fed7f-877d-4b30-8ce6-1eb1961c6740" InformativeScreenshot="6c7f4acebbc15e4212eb19e5a9a0ac24.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='[object Window]' title='Create New FirmFlow Folder' /&gt;" SearchSteps="FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
                       </uix:NClick.Target>
                     </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="500, 250, 535, 639" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="0e5a094ea14591b2b77fc0ddc7a05a93.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='[object Window]' url='*' /&gt;" Title="Create New FirmFlow Folder" />
+                <uix:TargetApp Area="500, 250, 535, 639" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVDhPfZM9SANBEIXvYqHBSmwsrAQR7MVSsNJCxMLOPpUiCjGIIFhbWMfmWsVSgxaKIP6hFkIEEUmsBC1SWYn43Ld7c5k97zLwmGHvfY+73b2Ahfdd4G0LaG74elnzu8zUaxkOJvg0D9wOA5dDwPUgcDHgpGfqvL89G299fwwB6nMOFjN7GqQEZo/nqNJrAh6nfaPWc8m+agJpnfV1CKChdYqkvlseKIrKxVSAmDinS4HZAQJKCNelGmajBeQz039PiuoTBBKJOS6auc6u5QLuJ/+DqQBcjXsgjrutopVCHCCADuG6lLk4GswNsCbpze2YNsUTMcBPrceTF6BhO/PoVKXhdsDdRAJp4WEG+Kw5mQuVH3CTvUFZAIXDgu1fByGqi6EJMDv8sZdtzhPho80QO8sj7o+sro9iabYrUWkq6Dizry4QDoI/cm7TeY4CZjIAAAAASUVORK5CYII=" InformativeScreenshot="0e5a094ea14591b2b77fc0ddc7a05a93.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='[object Window]' url='*' /&gt;" />
               </uix:NApplicationCard.TargetApp>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">

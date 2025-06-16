@@ -29,5 +29,10 @@
   "UiPath.UIAutomationNext.Activities.SearchStepsWeb.ComputerVision": "True",
   "UiPath.UIAutomationNext.Activities.SearchStepsJava.ComputerVision": "True",
   "UiPath.UIAutomationNext.Activities.SearchStepsSAP.ComputerVision": "False",
-  "UiPath.UIAutomationNext.Activities.Generic.EnableAutoAddToOR": "False"
+  "UiPath.UIAutomationNext.Activities.Generic.EnableAutoAddToOR": "False",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWnd.FindSelectorType": "Auto",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.FindSelectorType": "Auto",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.FindSelectorType": "One",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.FindSelectorType": "Auto",
+  "UiPath.UIAutomationNext.Activities.ApplicationCard.WindowAttachMode": "ByInstance"
 }
