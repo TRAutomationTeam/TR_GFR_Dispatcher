@@ -4,6 +4,7 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
+    "ExceptionClassifier": "[1.0.9]",
     "ReporterExcel": "[1.0.59]",
     "UiPath.DataService.Activities": "[25.2.0]",
     "UiPath.Excel.Activities": "[2.24.4]",

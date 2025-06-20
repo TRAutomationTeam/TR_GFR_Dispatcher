@@ -1,8 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestSummary_DataService_CRUD" this:TestSummary_DataService_CRUD.in_TestReportExcel="C:\Automation Team\REF_Integration\RPA-Folder\2024\Output\Test Summary Report\Performer_34896018.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TR_GFR_Dispatcher;assembly=DataService.TR_GFR_Dispatcher" xmlns:this="clr-namespace:" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestSummary_DataService_CRUD" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TR_GFR_Dispatcher;assembly=DataService.TR_GFR_Dispatcher" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_TestReportExcel" Type="InArgument(x:String)" />
+    <x:Property Name="in_ReportingException" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -132,7 +133,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="TestSummary_DataService_CRUD" sap:VirtualizedContainerService.HintSize="841.6,5434.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestSummary_DataService_CRUD" sap:VirtualizedContainerService.HintSize="1116,5426.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TransposedSummaryReport" />
       <Variable x:TypeArguments="t:TRAutomationMaster" sap2010:Annotation.AnnotationText="Type 't:TRAutomationMaster' ('clr-namespace:TR_Aut_Workflow_Performer_DD_2023;assembly=DataService.TR_Aut_Workflow_Performer_DD_2023') could not be resolved and was automatically replaced with 'UnknownType'&#xA;Type 't:TRAutomationMaster' ('clr-namespace:TR_Aut_Dispatcher_2024;assembly=DataService.TR_Aut_Dispatcher_2024') could not be resolved and was automatically replaced with 'UnknownType'" Name="ReportRecord" />
@@ -142,9 +143,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Data Service CRUD Ops" sap:VirtualizedContainerService.HintSize="865.6,5408.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Data Service CRUD Ops" sap:VirtualizedContainerService.HintSize="836.8,5403.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="828.8,4883.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="800,4854.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <Sequence.Variables>
             <Variable x:TypeArguments="t:TRAutomationMaster" Name="AutomationMasterRecord" />
           </Sequence.Variables>
