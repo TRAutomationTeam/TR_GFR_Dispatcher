@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>921.6,5499.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,5523.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestSummary_DataService_CRUD_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,22 +133,20 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="TestSummary_DataService_CRUD" sap:VirtualizedContainerService.HintSize="1116,5426.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestSummary_DataService_CRUD" sap:VirtualizedContainerService.HintSize="928,5458.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TransposedSummaryReport" />
       <Variable x:TypeArguments="t:TRAutomationMaster" sap2010:Annotation.AnnotationText="Type 't:TRAutomationMaster' ('clr-namespace:TR_Aut_Workflow_Performer_DD_2023;assembly=DataService.TR_Aut_Workflow_Performer_DD_2023') could not be resolved and was automatically replaced with 'UnknownType'&#xA;Type 't:TRAutomationMaster' ('clr-namespace:TR_Aut_Dispatcher_2024;assembly=DataService.TR_Aut_Dispatcher_2024') could not be resolved and was automatically replaced with 'UnknownType'" Name="ReportRecord" />
+      <Variable x:TypeArguments="t:TRAutomationMaster" Name="AutomationMasterRecord" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Data Service CRUD Ops" sap:VirtualizedContainerService.HintSize="836.8,5403.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Data Service CRUD Ops" sap:VirtualizedContainerService.HintSize="865.6,5369.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="800,4854.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="t:TRAutomationMaster" Name="AutomationMasterRecord" />
-          </Sequence.Variables>
+        <Sequence sap:VirtualizedContainerService.HintSize="828.8,4820.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -172,25 +170,25 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Data injection TestSummary Record to Data Service layer" sap:VirtualizedContainerService.HintSize="766.4,4165.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Data injection TestSummary Record to Data Service layer" sap:VirtualizedContainerService.HintSize="766.4,4103.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
             <ueab:ExcelProcessScopeX.Body>
               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="732.8,4056" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="732.8,3993.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Test Summary Report" sap:VirtualizedContainerService.HintSize="670.4,3967.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_TestReportExcel]">
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Test Summary Report" sap:VirtualizedContainerService.HintSize="670.4,3904.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_TestReportExcel]">
                     <ueab:ExcelApplicationCard.Body>
                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="636.8,3674.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="636.8,3612" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="str_StartTimeDispatcher" />
                             <Variable x:TypeArguments="x:String" Name="str_EndTimeDispatcher" />
@@ -224,32 +222,21 @@
                             </ueab:ReadCellValueX.SaveTo>
                           </ueab:ReadCellValueX>
                           <ueab:ReadRangeX DisplayName="Read Transposed Summary Range" sap:VirtualizedContainerService.HintSize="574.4,201.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[excel.Sheet(&quot;Transposed Data&quot;).Range(in_Config(&quot;TestSummary_TransposeRange&quot;).ToString)]" SaveTo="[dt_TransposedSummaryReport]" />
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_TransposedSummaryReport]" DisplayName="Binder Specific entry - Create Master Entity in Data Service" sap:VirtualizedContainerService.HintSize="574.4,2228.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_TransposedSummaryReport]" DisplayName="Binder Specific entry - Create Master Entity in Data Service" sap:VirtualizedContainerService.HintSize="574.4,2166.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,2031.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="t:TRAutomationMaster" Name="AutomationMasterRecord" />
-                                  </Sequence.Variables>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,1968.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MultipleAssign DisplayName="Test Summary Automation Master Records" sap:VirtualizedContainerService.HintSize="478.4,1428" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                  <ui:MultipleAssign DisplayName="Test Summary Automation Master Records" sap:VirtualizedContainerService.HintSize="478.4,1365.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                     <ui:MultipleAssign.AssignOperations>
                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="64">
-                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
-                                          <ui:AssignOperation.To>
-                                            <OutArgument x:TypeArguments="x:String">[AutomationMasterRecord.StartTimePerformer]</OutArgument>
-                                          </ui:AssignOperation.To>
-                                          <ui:AssignOperation.Value>
-                                            <InArgument x:TypeArguments="x:String">[str_StartTimePerformer]</InArgument>
-                                          </ui:AssignOperation.Value>
-                                        </ui:AssignOperation>
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
                                           <ui:AssignOperation.To>
                                             <OutArgument x:TypeArguments="x:String">[AutomationMasterRecord.BinderID]</OutArgument>
@@ -320,14 +307,6 @@
                                           </ui:AssignOperation.To>
                                           <ui:AssignOperation.Value>
                                             <InArgument x:TypeArguments="x:String">[str_EndTimeDispatcher]</InArgument>
-                                          </ui:AssignOperation.Value>
-                                        </ui:AssignOperation>
-                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
-                                          <ui:AssignOperation.To>
-                                            <OutArgument x:TypeArguments="x:String">[AutomationMasterRecord.EndTimePerformer]</OutArgument>
-                                          </ui:AssignOperation.To>
-                                          <ui:AssignOperation.Value>
-                                            <InArgument x:TypeArguments="x:String">[str_EndTimePerformer]</InArgument>
                                           </ui:AssignOperation.Value>
                                         </ui:AssignOperation>
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -424,14 +403,6 @@
                                           </ui:AssignOperation.To>
                                           <ui:AssignOperation.Value>
                                             <InArgument x:TypeArguments="x:String">[Row.Item("Status Client Creation").ToString.Trim]</InArgument>
-                                          </ui:AssignOperation.Value>
-                                        </ui:AssignOperation>
-                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-                                          <ui:AssignOperation.To>
-                                            <OutArgument x:TypeArguments="x:String">[AutomationMasterRecord.StatusSubmissionWizard]</OutArgument>
-                                          </ui:AssignOperation.To>
-                                          <ui:AssignOperation.Value>
-                                            <InArgument x:TypeArguments="x:String">[Row.Item("Status Submission Wizard").ToString.trim]</InArgument>
                                           </ui:AssignOperation.Value>
                                         </ui:AssignOperation>
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
@@ -578,6 +549,14 @@
                                             <InArgument x:TypeArguments="x:String">[now.ToString("dd/MM/yyyy")]</InArgument>
                                           </ui:AssignOperation.Value>
                                         </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_45">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[AutomationMasterRecord.BinderCreationGFR]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">[Row.Item("Binder Creation_GFR").ToString]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
                                       </scg:List>
                                     </ui:MultipleAssign.AssignOperations>
                                     <sap:WorkflowViewStateService.ViewState>
@@ -587,7 +566,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:MultipleAssign>
-                                  <uda:CreateEntityRecord x:TypeArguments="t:TRAutomationMaster" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="6e0003df-b003-f011-90cb-0022489c7866" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntity="[AutomationMasterRecord]" InputEntityInFieldView="[new TR_GFR_Dispatcher.TRAutomationMaster()]" IsInRecordView="True" TimeoutInMs="30000">
+                                  <uda:CreateEntityRecord x:TypeArguments="t:TRAutomationMaster" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="6e0003df-b003-f011-90cb-0022489c7866" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntity="[AutomationMasterRecord]" InputEntityInFieldView="[new TR_GFR_Dispatcher.TRAutomationMaster()]" IsInRecordView="True" OutputEntity="[ReportRecord]" TimeoutInMs="30000">
                                     <uda:CreateEntityRecord.State>
                                       <udam:RecordState IsInRecordView="True">
                                         <udam:RecordState.SelectedFields>
@@ -624,7 +603,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ForEachRow>
-                          <ueab:DeleteSheetX DisplayName="Delete Transposed Sheet" sap:VirtualizedContainerService.HintSize="545.6,113.6" sap2010:WorkflowViewState.IdRef="DeleteSheetX_1" Sheet="[excel.Sheet(&quot;Transposed Data&quot;)]" />
+                          <ueab:DeleteSheetX DisplayName="Delete Transposed Sheet" sap:VirtualizedContainerService.HintSize="574.4,113.6" sap2010:WorkflowViewState.IdRef="DeleteSheetX_1" Sheet="[excel.Sheet(&quot;Transposed Data&quot;)]" />
                         </Sequence>
                       </ActivityAction>
                     </ueab:ExcelApplicationCard.Body>
@@ -648,7 +627,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="716.8,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="832,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
