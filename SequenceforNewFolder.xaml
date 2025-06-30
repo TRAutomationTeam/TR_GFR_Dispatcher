@@ -11,7 +11,7 @@
   <this:SequenceforNewFolder.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:SequenceforNewFolder.in_Config>
-  <sap:VirtualizedContainerService.HintSize>1408.8,3720</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,3720</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -2329,7 +2329,7 @@
                 </ActivityFunc>
               </p:CVScope.OCREngine>
               <p:CVScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="401a6e2a-38c3-4695-8b1b-78b01b60a185" InformativeScreenshot="6e00dc1295b441d37f192f8ba401d4b2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='My Work | GoFileRoom - Google Chrome' /&gt;&lt;ctrl name='My Work | GoFileRoom - Google Chrome' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="401a6e2a-38c3-4695-8b1b-78b01b60a185" InformativeScreenshot="6e00dc1295b441d37f192f8ba401d4b2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='My Work*' /&gt;&lt;ctrl name='My Work | GoFileRoom - Google Chrome' role='pane' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
