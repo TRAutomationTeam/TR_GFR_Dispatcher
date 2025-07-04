@@ -11,7 +11,7 @@
   <this:SequenceforNewFolder.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:SequenceforNewFolder.in_Config>
-  <sap:VirtualizedContainerService.HintSize>1103.2,3720</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,3800</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -153,7 +153,7 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence for New Folder" sap:VirtualizedContainerService.HintSize="1110.4,3655.2" sap2010:WorkflowViewState.IdRef="Sequence_216">
+  <Sequence DisplayName="Sequence for New Folder" sap:VirtualizedContainerService.HintSize="1110.4,3735.2" sap2010:WorkflowViewState.IdRef="Sequence_216">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strAssignedTo" />
     </Sequence.Variables>
@@ -176,19 +176,19 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome My Work  GoFileRoom" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1048,3416.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3daa3002-49da-4c8c-be8c-d5a060063f30" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome My Work  GoFileRoom" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1048,3496.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3daa3002-49da-4c8c-be8c-d5a060063f30" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do 'GFR Dispatcher'" sap:VirtualizedContainerService.HintSize="1014.4,3176.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do 'GFR Dispatcher'" sap:VirtualizedContainerService.HintSize="1014.4,3256.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope DisplayName="Retry Scope 'My Work'" sap:VirtualizedContainerService.HintSize="952,640" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:RetryScope DisplayName="Retry Scope 'My Work'" sap:VirtualizedContainerService.HintSize="952,720" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_211">
@@ -2329,7 +2329,7 @@
                 </ActivityFunc>
               </p:CVScope.OCREngine>
               <p:CVScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="401a6e2a-38c3-4695-8b1b-78b01b60a185" InformativeScreenshot="6e00dc1295b441d37f192f8ba401d4b2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='My Work*' /&gt;&lt;ctrl name='My Work | GoFileRoom - Google Chrome' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="401a6e2a-38c3-4695-8b1b-78b01b60a185" InformativeScreenshot="6e00dc1295b441d37f192f8ba401d4b2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='My Work*' /&gt;&lt;ctrl name='My Work*' role='pane' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
